@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#more {display: none;}
+</style>
+
+
+
+
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 18px 740px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 15px 1280px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #9a7980;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fa {
+  font-size: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+  <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\education.html" class="w3-bar-item w3-button">Education</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\psus.html" class="w3-bar-item w3-button">PSUs</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\governmentagencies.html" class="w3-bar-item w3-button">Government agencies</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\fundingagencies.html" class="w3-bar-item w3-button">Funding agencies </a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\incubationcenters.html" class="w3-bar-item w3-button">Incubation centers</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html" class="w3-bar-item w3-button">Youth Opportunities</a>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html" class="w3-bar-item w3-button">About Us</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\contactus.html" class="w3-bar-item w3-button">Contact Us</a>
+</div>
+
+<div class="w3-teal"bgcolor="red" >
+  <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+  <button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+  <div class="w3-container" bgcolor="#9a7980" >
+      <h1 bgcolor="#e7c89b"><center>Dr. APJ Abdul Kalam Centre for Policy Research and Analysis, IIM
+Shillong</center></h1>
+  </div>
+</div>
+
+
+
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+  
+  
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Search</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="C:\Users\DELL\Desktop\IIM fol\tourism.html">Tourism</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handloom.html">Handloom</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html">Handicraft</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html">Horticulture</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\logistics.html">Logistics</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\education.html">Education</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html">Youth Opportunities</a>
+  </div>
+</div>
+
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="white">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+
+<table colspan="2" border="0" width="100%" height="20" bgcolor="white">
+<tr>
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\tourism.html" style="color:black;">Tourism</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handloom.html" style="color:black;">Handloom</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html" style="color:black;">Handicraft</a></th>
+
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html" style="color:black;">Horticulture</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\logistics.html" style="color:black;">Logistics</a></th>
+
+</tr>
+</table>
+
+
+<table border="0" width="100%" bgcolor="white">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+<img src="C:\Users\DELL\Desktop\Shillong Images\22233333.webp" width="1600" height="600">
+
+
+
+
+
+
+<table bgcolor="#f4ece1">
+
+
+<tr><th><p>Assam, state of India. It is located in the northeastern part of the country and is bounded to the north by the kingdom of Bhutan and the state of Arunachal Pradesh, to the east by the states of Nagaland and Manipur, to the south by the states of Mizoram and Tripura, and to the west by Bangladesh and the states of Meghalaya and West Bengal. The name Assam is derived from the word asama, meaning “peerless” in the now extinct Ahom language. The neighbouring states of Arunachal Pradesh, Nagaland, Mizoram, and Meghalaya were once part of Assam. The capital, formerly Shillong (now the capital of Meghalaya), was shifted to Dispur, a suburb of Guwahati, in 1972. Area 30,285 square miles (78,438 square km). Pop. (2011) 31,169,272.</p></th></tr>
+</th></tr>
+</table>
+
+
+<table bgcolor="#e6cdcd">
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\assampeopleandculture2.webp" style="width:450" height="400" ></th>
+<th><h1>People and Culture</h1></th></tr>
+<tr><td rowspan="2"><p>The people of the plains of the Brahmaputra and Barak valleys are mainly of Indo-Iranian ancestry. By the time of their arrival in the region, however, the local Aryan peoples had become intermixed with Asiatic peoples. The Ahom people, who arrived in the region from mainland Southeast Asia during the 13th century, ultimately stem from Yunnan province of southern China. A significant minority of the population consists of rural indigenous peoples who fall outside the Indian caste system; as such, they are officially designated as Scheduled Tribes. The Bodo constitute the largest of these groups. Most of the Scheduled Tribes live in the south-central hill region and are of Asiatic descent.
+
+Assamese, an Indo-Aryan language, is the official and principal language of the state, and an unbroken record of Assamese literary history is traceable from the 14th century. Tibeto-Burman languages are spoken by most of the Scheduled Tribes, although the Khasi people speak an Austroasiatic tongue; some groups have adopted Assamese as their first language. The people in the Barak valley in southern Assam mostly speak Bengali (also called Bangla), which, like Assamese, is an Indo-Aryan language. About three-fifths of the Assamese are Hindus, the majority of whom follow Vaishnavism, which venerates the deity Vishnu. Roughly one-third of the population practices Islam, most Muslims being settlers from Bangladesh or converts from the lower strata of Hindu society. Although many of the Scheduled Tribes have converted to Christianity, some continue to practice traditional local religions; the Mikir and Kachari peoples are mostly Hindus.
+</p></td></tr>
+
+
+</table>
+<table bgcolor="#e7c89b">
+<tr><td><center><h1>More About Assam</h1></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\moreaboutassam.jpeg" style="width:450" height="400" ></td></tr>
+
+
+
+<tr><td><p>The cultural life of Assam is interwoven with the activities of a number of cultural institutions and religious centres, such as the satra (seat of a religious head known as the satradhikar) and namghar (prayer hall). Satras in Assam have been looking after the religious and social well-being of the Hindu population since the 15th centuryThe Assamese people observe all the pan-Indian religious festivals, but their most important celebrations are the three Bihu festivals. Originally agricultural festivals, they are observed with great enthusiasm irrespective of caste, creed, and religious affinity. The Bohag Bihu, celebrated in the spring (usually mid-April), marks the commencement of the new year (first day of the Bohag or Baishakh month). Also known as Rangoli Bihu (from rang, meaning merrymaking and fun), it is accompanied by much dancing and singing. The Magh Bihu, celebrated in mid-January (in the month of Magh), is a harvest festival. Known also as Bhogali Bihu (from bhog, meaning enjoyment and feasting), it is a time of community feasts and bonfires. The third Bihu festival, the Kati Bihu (in mid-October or November), is also called the Kangali Bihu (from kangali, meaning poor), because by this time of year the house of an ordinary family is without food grains, as the stock is usually consumed before the next harvest.
+
+Weaving is another important aspect of the cultural life of the people of Assam, particularly the women. Nearly every Assamese household, irrespective of caste, creed, and social status, has at least one loom, and most women are expected to be skilled in producing fine silk and cotton cloths.
+
+Assamese cuisine is based on rice, a variety of vegetables and fruits, and fish. Distinctive are its bitter (khar) and sour (tenga) dishes, which are often served at the beginning and end of meals, respectively. A popular tenga dish is a stew made with pieces of fried fish that are then simmered with fenugreek seeds, vegetables, and lemon or lime juice. Khar recipes often achieve their slightly astringent taste by using a sodalike substance made from the ashes of the banana plant.
+<br>
+<h4>Climate</h4><br>
+Sikkim exhibits a variety of climatic types, from almost tropical conditions in the south to severe mountain climates in the north. In Gangtok, temperatures in January (the coldest month) drop into the low 30s F (about 0 °C); in August (the warmest month), temperatures may reach the low 80s F (about 28 °C). Depending on elevation and exposure, annual precipitation varies from 50 to 200 inches (1,270 to 5,080 mm), most occurring during the months of the southwest monsoon (May through October). The heavy rains and snows often trigger destructive landslides and avalanches.
+<br><br>
+
+
+</td></tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>In the earliest recorded times, Assam was part of Kamarupa, a state that had its capital at Pragjyotishapura (now Guwahati). Ancient Kamarupa included roughly the Brahmaputra River valley, Bhutan, the Rangpur region (now in Bangladesh), and Koch Bihar, in West Bengal state. King Narakasura and his son Bhagadatta were famous rulers of Kamarupa in the Mahabharata period (roughly 400 BCE to 200 CE). A Chinese traveler, Xuanzang, left a vivid account of the country and its people about 640 CE. Although information about the following centuries is meagre, clay seals and inscriptions on copper plates and stone that date from the 7th to the mid-12th century indicate that the inhabitants of the region attained considerable power and a fair degree of social, economic, and technological development. The copper plates further provide clues as to the locations of important ancient settlements and the routes connecting them.
+
+Assam was ruled by various dynasties—the Pala, Koch, Kachari, and Chutiya—and there was constant warfare among the princes until the coming of the Ahom people in the 13th century. The Ahom crossed the Patkai Range from Myanmar (Burma) and conquered the local chieftains of the upper Assam plain. In the 15th century the Ahom, who gave their name to the region, were the dominant power in upper Assam. Two centuries later they defeated the Koch, Kachari, and other local rulers to gain control of lower Assam up to Goalpara. Ahom power and prosperity reached a zenith during the rule of King Rudra Singh (reigned 1696–1714), before the kingdom was occupied by warriors from Myanmar in the late 18th century.<span id="dots">...</span><span id="more"> Conflict among the princes gradually weakened the central administration until 1786, when the ruling prince, Gaurinath Singh, sought aid from Calcutta (Kolkata), which by that time had become the capital of British India. A British army officer, sent by the British governor-general in India, restored peace and subsequently was recalled, in spite of the protests of the Ahom king. Internal strife then caused one crisis after another until, in 1817, forces from Myanmar entered Assam in response to the appeal of a rebellious governor and ravaged the area.
+
+The British, whose interests were threatened by those developments, ultimately drove out the invaders, and, after the Treaty of Yandabo was concluded with Myanmar in 1826, Assam became a part of British India. A British agent, representing the governor-general, was appointed to administer Assam, and in 1838 the area was incorporated into British-administered Bengal. By 1842 the whole of the Brahmaputra valley of Assam had come under British rule. A separate province of Assam (administered by a chief commissioner) was created in 1874 with its capital at Shillong. In 1905 Bengal was partitioned, and Assam was amalgamated with eastern Bengal; this created such resentment, however, that in 1912 Bengal was reunited, and Assam was once more made a separate province. During World War II, Assam was a major supply route for Allied forces operating in Burma. Several battles fought in the area in 1944 (e.g., at Bishenpur in Manipur and Kohima in Nagaland) were decisive in halting the Japanese advance into India.
+
+
+
+
+</span></p>
+<button onclick="myFunction()" id="myBtn">Read more</button>
+
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br><br></td></tr>
+</table>
+
+
+<center>
+<table border="0" width="50%" bgcolor="#14274e">
+
+
+<tr>
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>North East State Research</b></font><hr width="250" height="10"></td>
+
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>Menu</b></font><hr width="250" height="10"></td>
+
+
+</tr>
+
+<tr>
+<td>
+<a href="C:\1\grains.html"><font color="white">Arunachal Pradesh, Assam, Meghalaya,<br><br> Tripura,Nagaland, Mizoram, Sikkim, Manipur</a><br>
+
+
+<td>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\contactus.html"><font color="white">Contact Us</a><br><br>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html"><font color="white">About Us</a><br>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+</center>
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br>
+<hr class="rounded">
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+

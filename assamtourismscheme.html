@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 18px 740px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 15px 1280px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #9a7980;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fa {
+  font-size: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+  <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\education.html" class="w3-bar-item w3-button">Education</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\psus.html" class="w3-bar-item w3-button">PSUs</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\governmentagencies.html" class="w3-bar-item w3-button">Government agencies</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\fundingagencies.html" class="w3-bar-item w3-button">Funding agencies </a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\incubationcenters.html" class="w3-bar-item w3-button">Incubation centers</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html" class="w3-bar-item w3-button">Youth Opportunities</a>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html" class="w3-bar-item w3-button">About Us</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\contactus.html" class="w3-bar-item w3-button">Contact Us</a>
+</div>
+
+<div class="w3-teal"bgcolor="red" >
+  <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+  <button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+  <div class="w3-container" bgcolor="#9a7980" >
+      <h1 bgcolor="#e7c89b"><center>Dr. APJ Abdul Kalam Centre for Policy Research and Analysis, IIM
+Shillong</center></h1>
+  </div>
+</div>
+
+
+
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+  
+  
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Search</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="C:\Users\DELL\Desktop\IIM fol\tourism.html">Tourism</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handloom.html">Handloom</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html">Handicraft</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html">Horticulture</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\logistics.html">Logistics</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\education.html">Education</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html">Youth Opportunities</a>
+  </div>
+</div>
+
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="white">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+
+<table colspan="2" border="0" width="100%" height="20" bgcolor="white">
+<tr>
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\tourism.html" style="color:black;">Tourism</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handloom.html" style="color:black;">Handloom</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html" style="color:black;">Handicraft</a></th>
+
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html" style="color:black;">Horticulture</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\logistics.html" style="color:black;">Logistics</a></th>
+<th><a href="C:\Users\DELL\Desktop\IIM fol\assamtourismscheme.html" style="color:black;">Scheme</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\assamtourismpolicy.html" style="color:black;">Policy</a></th>
+
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img src="C:\Users\DELL\Desktop\Shillong Images\as.jpg" width="1600" height="600">
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Schemes of Assam</h2>
+<br>
+
+<p>
+<h3>1. Preamble :</h3><br>
+1.1 Tourism has emerged as one of the largest industries in the World today. It is an industry which
+can easily change the economic scenario of a country. Several countries have transformed
+themselves through tourism and created a global presence in the tourism industry. Tourism
+is not directed to commercial or population centers but in most cases towards natural and
+cultural resources. Thus, tourism can contribute significantly where other commercial
+activities are limited. Developed tourism can bring smiles to every household of a state or
+a country. Tourist movements have spread across the globe, becoming for many of them an
+important sector in terms of employment generation and foreign exchange earnings.
+1.2 As reported by the United Nations World Tourism Organization (UNWTO) Tourism Highlights
+2015 Edition, International tourist arrivals grew to 1.1 billion in 2014 from a mere 25 million in
+1950. The UNWTO estimate that approximately 1 in every 11 person in the World is employed
+by the tourism industry. As of 2014, the global tourism industry generated USD 7.6 trillion,
+constituting 10% of the global GDP.
+1.3 The economic significance of tourism especially in terms of employment, income generation,
+foreign exchange and regional development is a major driving force that enables the national
+and state governments to place tourism most appropriately, in the overall development agenda.
+The Union Government has recently declared that it would give top priority on the development
+of five ‘T’s i.e. Tradition, Talent, Trade, Technology and Tourism for overall development of
+the nation. Local communities across the tourism destinations are encouraged to minimize
+leakages and maximize linkages of the industry with a view to reap maximum benefit.
+1.4 Assam is endowed with plentiful natural and cultural resources which can form the basis for
+a very lucrative tourism industry, creating employment and generating income not only in
+the urban centers but also in the rural areas. What has held tourism back in Assam was its
+insurgency issues, its remoteness, a sense of perceived insecurity and negative publicity of
+the place. The need of the hour is to market Assam vigorously in order to refurbish its image
+in the national and international market using latest technological interventions. Assam can
+become one of the most sought after destinations in the country because of its magnificent
+tourism products like exotic wildlife, awesome scenic beauty, colorful fairs and festivals, age
+old historical monuments, lush green tea gardens and golf courses, massive river Brahmaputra
+and its tributaries, serene and tranquil country side and warm and hospitable people.
+1.5 Tourism activities in Assam have developed sporadically and in an unplanned manner. Also
+due to very limited government funds made available to the tourism sector and hesitation of
+the private sector to invest due to various issues, tourism promotion and marketing activities
+have always taken a back seat. <br><br>
+
+
+<h3>2.Vision</h3><br>
+2.1 Assam becomes a Nationally and Internationally acclaimed all-season Tourist destination for
+its unique wildlife, bio-diversity and experience of an unexploited wonderland. Tourism is to
+be one of the main sources of income-generation for the people. It will also be a vibrant and
+significant contributor to the sustainable development of the State of Assam.<br><br>
+<h3>3.Mission</h3><br>
+3.1 To bring in maximum footfalls to Assam.
+3.2 To promote Assam Tourism with a new approach of vigorous massive campaigning.
+3.3 To build a global brand ‘Awesome Assam’ to attract National and International Tourist.
+3.4 In keeping with “Act East Policy” of Central Government, we will have close collaboration with
+other neighboring countries like Bhutan, Nepal, Bangladesh, Myanmar, Thailand, Laos Vietnam,
+South Korea, Japan, China & other South East Asian Countries harping on the similarities of
+these communities with the people of Assam.
+3.5 Identify most popular and attractive tourist destinations and develop tourist Infrastructure in
+an around them.
+3.6 To encourage Responsible Tourism (RT) in the state with a view to preserving environment
+eco-systems in keeping with Sustainable Development Goals.
+3.7 To facilitate extensive involvement of private sector and active participation of local community
+in all aspects of Tourism promotion.
+3.8 To create an investment friendly atmosphere for promotion of Tourism by making full use of
+Ease of Doing Business.
+3.9 To conduct special skill development Certificate programs of local youths in Hospitality and for
+Tourism Sector, the advantage of Government of India’s Skill India and ‘Hunar Se Rojgar tak’ shall
+be leveraged.
+3.10 Adopting Information Communication Technology (ICT) in Tourism Sector.
+3.11 To ensure safety and security of the tourists.
+3.12 To promote Spiritual Tourism centering on Kamakhya Temple as India’s most powerful ShaktiPeeth highlighting Ambubachi Mela.
+3.13 To promote Wildlife Tourism centering on one-horned Rhinoceros.
+3.14 To promote Tea Tourism of Assam.
+3.15 To provide ‘Excellence Awards’ annually for Tourism.
+3.16 Promote Film Tourism by developing single Window clearances and providing incentive to film
+makers.
+3.17 A special incentive package in the form of logistic support within Assam should be provided to
+the film producers to kick start their arrivals.
+
+3.18 Development of Wayside amenities on Tourism Routes in a PPP mode.
+3.19 Development of Package tours to destinations of other states by suitable engagement with
+their Tourism departments and Tour operators of Assam.<br><br>
+<h3>4. Objectives:</h3><br>
+4.1 To make Assam a tourist Hub for North East India.
+4.2 To market Assam as a hot destination for the tourists from East & South East Asian
+Countries.
+4.3 To leverage innovative forms of Tourism such as Cruises, Ethnic Tourism, Tea & Golf, leisure
+Tourism, Transit Tourism, Adventure Tourism and Monsoon Tourism.
+4.4 To develop positive, Tourist friendly and reciprocative culture among local tour operators,
+guides and hospitality providers.
+4.5 To upgrade skill, quality and professionalism of all service providers connected with tourism.
+4.6 To develop tourism packages to cater to various types of tourists and market them through
+global and local tour operators.
+4.7 Popularizing local and community hosts to promote Bed and Breakfast, cottages on stilts
+accommodation all across the Tourist spots/destinations.
+4.8 Developing Assam into an all season tourist destination.
+4.9 To focus on benefits for the Community from tourism.
+4.10 To create enabling environment for investment.<br><br>
+<h3>5. Strategies:</h3><br>
+5.1 Assam Tourism website.
+5.1.1 An interactive and fully comprehensive website of Assam Tourism will be launched wherein all
+required information for any prospective domestic or international tourist will be readily available
+at the click of the mouse. The website will contain linkages to all sorts of information and bookings
+including Hotels, Air Travel, Rail & Road, Bus, Home Stays, Bed & Breakfast accommodation,
+Restaurants, Details of Tourist destinations, packages, Fairs and events, Route maps etc. It will have
+the facility for two way interactions with all stakeholders such as Tourists, Tour Guides and Tour
+operators. Hoteliers, Restaurateurs etc to collect feedback information on Do’s and Don’ts, weather
+and local cultures will also be hosted to guide the prospective tourists.
+5.1.2 A vigorous campaigning through social media such as Facebook, You-Tube, Twitter, Blogging
+sites will be launched to attract the younger up-coming generation of Tourists. A special cell for
+maintenance & updating of information will be created for sustainability. A separate statistical
+cell shall also be created for Management Information System, generation of statistics and their
+analysis.
+5.1.3 Regular Meet with the National and International Tour Operators Association & Hoteliers &
+Restaurateurs Association will be organized. Fam tours will also be organized regularly.
+
+5.2 Building Brand
+5.2.1 Inspite of having tremendous tourism potential, Assam has not yet aggressively marketed itself. A
+comprehensive marketing strategy will be chalked out in consultation with professional agencies.
+A brand image of Assam as “Awesome Assam” will be created portraying the states uniqueness and
+exotic beauty. The brand name will be translated to Hindi and other National and International
+languages.
+5.2.2 A renowned celebrity will be roped in as brand Ambassador of Awesome Assam.
+5.2.3 A blitz-Krieg National & International Promotional Campaign shall be launched to build “Awesome
+Assam brand through newspapers life style magazines, in-flight magazines, TV advertisements,
+Talk shows, Road shows, Travel marts and Tourism stalls and kiosks etc.
+5.3 Assam-A Tourist hub for North East India.
+5.3.1 Assam is the gateway to the North Eastern states. Geographically and culturally the states have
+interdependent relationship. A total NE perspective in tourism planning, where the strength of
+each state complement each other is beneficial to all and is a constructive way forward for tourism
+promotion. Assam will play a proactive role to develop such a wide view of tourism promotion
+through coordination among the states in creating zonal and regional circuits.
+5.3.2 Most of the tourists travelling to other seven sister states have to transit through Guwahati. Half/
+full day City tour packages by ATDC and private operators will be an incentive for the travellers to
+extend their duration of stay which in turn will boost the local economy.
+5.4 Wildlife Tourism
+5.4.1 An attractive feature of the Assam’s forests is its colorful wildlife. Some of the species are exclusive
+to the state. Assam is famous as the home of one-horned rhinoceros which is its unique selling
+point apart from the fauna.
+5.4.2 Though most of the domestic and international tourists are drawn towards Kaziranga and this
+heritage site has got best tourist facilities with private participation, yet the Government will
+develop infrastructure around individual Wildlife sanctuaries such as Manas, Pabitora, Orang,
+Pani Dihing, Barail and Nameri at Dibru-Saikhowa across Assam to accommodate tourists and
+resort to aggressive marketing to position Assam as Wildlife destination of the world. The Quality
+of Tourist facilities will be improved and proper tourist information centers will be established in
+each place.
+5.5 Spiritual Tourism
+5.5.1 After wildlife, it is the spiritual tourism which attracts pilgrim tourists to Assam. Centering on the
+most famous Shakti-peeth, Kamakhya Temple atop Nilachal hill top in Guwahati city, the religious/
+spiritual tourism can catapult Assam into a major spiritual tourism destination in the country.
+Assam is known among the pilgrims and domestic tourists as a wonderland soaked in Shaktipooja, mysticism, tantric practice, mythology and black magic of Mayong with Kamakhya as the
+epicenter. This advantage shall be turned into revenue spinning machine and local employment
+creation by right interventions.
+Iconic temples and other religious monuments sprawl
+across the state, some of which date back to medieval
+times and reflect the great historical and cultural past.
+
+5.5.2 Kamakhya Temple perched on top of picturesque Nilachal Hill in the middle of city is surrounded by
+numerous minor temples dotting the hill. Its unique position in Indian mythology and convenient
+geographical location attracts thousands of pilgrim tourists to the Nilachal Hill. Therefore a brand
+Nilachal will be developed in the next five years in an integrated manner utilizing Government
+of India funds under PRASAD scheme. The Government will endeavour to help put in place best
+practices for the Management of the Temple.
+5.5.3 An annual four day Ambubasi Mela at Kamakhya temple during the month of June has come to
+be known as Mahakumbh of the East where lakhs of people and sadhus congregate. This shall
+be highlighted in publicity campaigns in domestic tourist circuits with an appropriate tagline
+giving forceful punch to spiritual tourism.
+5.5.4 Hajo is another centre where people from three religions- Hindu, Muslim and Buddhists
+converge for pilgrimage. It has always been symbol of communal harmony for the country
+and will continue to be projected as such. Hajo will also be linked with Guwahati city tour/ day
+tour.
+5.5.5 “Sankardev Trail” or “Vaishnav- Trail”- projecting Vaishnavite cultural proliferation in Assam
+will be developed in Barpeta-Bordua-Majuli. A number of Museums depicting the life of the
+great saint & reformer and development of neo-vaishnavism will be set up with the help of
+the Government. A number of local souvenirs, local handicrafts and cuisines will be developed
+and managed by the Local entrepreneurs.
+5.5.7 Eff orts shall be directed for preparing Buddhist circuit in the State to woo large number of
+Buddhist pilgrims.
+5.6 Ethnic Tourism
+5.6.1 Assam has been a unique place on earth for the cultural and ethnic diversities. The state is
+a home land of various ethnic tribes and groups, each having its own cultural heritage. Each
+of these tribes possesses some unique features in its socio-cultural life including customs,
+religious belief, language, culture, dress, way of life, festivals, food habits, songs and dances
+which are diff erent from others.
+5.6.2 Ethnic Tourist circuits will be developed to attract the tourists from all over the world. The
+ethnic socio-cultural and religious festivals will be organized where Songs and dances, display
+of colourful dresses, tasting of innumerable varieties of both vegetarian and non-vegetarian
+dishes is the main feature.
+5.6.3 Foreign tourists in India are driven by the desire to see something diff erent where curiosity
+is the ultimate factor. The travelers choose to experience firsthand practices of another
+culture, and may involve performances, presentations and attractions portraying or
+presented by indigenous communities. In a broader perspective, it includes cultural, heritage,
+anthropological, tribal, village and similar forms of tourism. Ethnic tourism, will be properly
+planned, managed and promoted as sustainable form of tourism and also utilized as a tool for
+the preservation and conservation of culture and heritage as well as for poverty alleviation.
+
+5.7 Tea & Golf Tourism.
+5.7.1. Since discovery of tea in 1823, tea-gardens have become an integral part of Assam’s landscape.
+Each of these thousands of lush green tea gardens in Assam is a treasure house of exotic beauty
+of nature with colourful people and their enchanting songs and dances, sprawling bungalows,
+and residential facilities. Many of these tea gardens have polo fields and golf courses. There
+are as many as thirty air strips and helipads maintained by the tea garden management. These
+facilities can be included within attractive Tourist packages.
+5.7.2 Therefore, coordination with the management of the tea gardens can eff ectively do a lot in
+promoting tea tourism in the state. Tourism Department will engage and persuade some of
+the willing tea gardens to be a partner in tea tourism packages.
+5.7.3 There are about 20 key golf courses located mostly within the compact arear of tea gardens.
+These off er a unique opportunity to develop golf tourism in the state. Most of the courses are
+located near the airstrips and helipads maintained by the tea garden management. In recent
+years, domestic and foreign tourists are coming to play golf in diff erent golf courses, and a
+good number of them use these air strips and helipads.
+5.7.4 Golf tourism will also be integrated with eco and tea tourism.
+5.8 River Tourism
+5.8.1 The State of Assam has an extensive river network. Brahmaputra is intrinsic to the socio-cultural
+life in Assam. Assam has immense opportunities to develop river tourism and water leisure
+activities. Colorful canal barges, boating, luxury cruisers, motor boats, dolphin shows, under
+water-world, water sports and lighters, para sailing, river rafting, water amusements and
+more. River tourism in Assam could be a great way to spend holidays. International standard
+of luxury cruises can be a great driver to draw more domestic and international tourist traffic
+to Assam.
+5.8.2 Ethnic tourism on both banks of river with infrastructure and on-shore linkages for night halts
+from Guwahati to Majuli will be put in place by promoting ethnic tourism.
+5.8.3 Recently the endangered Gangetic river Dolphin has been voted the “City Animal” of Guwahati
+and it can be spotted in large numbers in the Kulsi at Kukurmara. In the vicinity of Kulsi, Mirza
+and Bijoynagar are famous for rural household weaving and of use natural dyes, while the
+Industrial Complex at Chatabari houses, a unit which prepares tree free handmade paper and
+paper handicrafts from elephant dung and local plant wastes. This can be developed as river
+cum ethnic tourist circuit.
+5.8.4 Government will promote river taxi services between the North and South banks at
+Brahmaputra at places of touristic interest.
+
+5.9 Transit Tourism
+5.9.1 For many of the tourists, particularly for foreigners, Guwahati is not only a tourist destination
+but also is perceived as a halt or the entry-point to the north eastern states. It is a city from
+where one could connect to other parts of Assam or get in and out of the northeast. On an
+average, a tourist spends about 2 days in transit which could be turned as a great opportunity
+to promote Guwahati City based Tourism titled as ‘One day in Guwahati’ or ‘Two days in
+Guwahati’.
+5.9.2 Apart from Tourist spot visits in the day time, Government will also promote Night Life in
+and around Guwahati city like nightclubs, malls, pubs, bars, sports bar and indoor gaming etc
+through the Private Sector.
+5.10 Adventure Tourism
+5.10.1 The enchanting blue hills and speedy rivers of Assam provide and enormous scope for the
+development of water based adventure tourism. Recently, some of the adventure sports
+activities like rock-climbing, trekking, para-sailing, water sports, river rafting and angling are
+promoted by the Department of Tourism. Tourism Department will join hands with Adventure
+Institute of Sports Department to design various adventure activities at tourist sites catering to
+tourists in particular. This will generate a lot of employment opportunities for local youths.
+5.11 Monsoon & Leisure Tourism
+5.11.1 Assam has early onset of Monsoon, generally beginning from 15th of May, compared to most
+other parts of India where Monsoon arrives only in late June or early July. Maximum day
+temperatures remain around a comfortable 27-34 degrees centigrade with plenty of rain
+when the large part of western India simmers under successive heat waves with temperatures
+soaring as high as 38-45 degrees. The comparatively cooler climate and fulsome rains coupled
+with summer vacations in other parts of the country is a major advantage for Assam to attract
+domestic travellers. ‘The Monsoon Country’ tag and proximity to Cherrapunjee, the wettest
+place on earth and discounts in luxury hotels, cottages, homestays and huts-on-stilts will
+obliterate seasonality in Assam Tourism and generate revenue throughout the year.
+
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br><br></td></tr>
+</table>
+
+
+<center>
+<table border="0" width="50%" bgcolor="#14274e">
+
+
+<tr>
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>North East State Research</b></font><hr width="250" height="10"></td>
+
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>Menu</b></font><hr width="250" height="10"></td>
+
+
+</tr>
+
+<tr>
+<td>
+<a href="C:\1\grains.html"><font color="white">Arunachal Pradesh, Assam, Meghalaya,<br><br> Tripura,Nagaland, Mizoram, Sikkim, Manipur</a><br>
+
+
+<td>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\contactus.html"><font color="white">Contact Us</a><br><br>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html"><font color="white">About Us</a><br>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+</center>
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br>
+<hr class="rounded">
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+</body>
+</html>

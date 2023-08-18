@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 18px 740px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 15px 1280px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #9a7980;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fa {
+  font-size: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+  <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\education.html" class="w3-bar-item w3-button">Education</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\psus.html" class="w3-bar-item w3-button">PSUs</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\governmentagencies.html" class="w3-bar-item w3-button">Government agencies</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\fundingagencies.html" class="w3-bar-item w3-button">Funding agencies </a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\incubationcenters.html" class="w3-bar-item w3-button">Incubation centers</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html" class="w3-bar-item w3-button">Youth Opportunities</a>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html" class="w3-bar-item w3-button">About Us</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\contactus.html" class="w3-bar-item w3-button">Contact Us</a>
+</div>
+
+<div class="w3-teal"bgcolor="red" >
+  <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+  <button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+  <div class="w3-container" bgcolor="#9a7980" >
+      <h1 bgcolor="#e7c89b"><center>Dr. APJ Abdul Kalam Centre for Policy Research and Analysis, IIM
+Shillong</center></h1>
+  </div>
+</div>
+
+
+
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+  
+  
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Search</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="C:\Users\DELL\Desktop\IIM fol\tourism.html">Tourism</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handloom.html">Handloom</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html">Handicraft</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html">Horticulture</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\logistics.html">Logistics</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\education.html">Education</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html">Youth Opportunities</a>
+  </div>
+</div>
+
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="white">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+
+<table colspan="2" border="0" width="100%" height="20" bgcolor="white">
+<tr>
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\tourism.html" style="color:black;">Tourism</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handloom.html" style="color:black;">Handloom</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html" style="color:black;">Handicraft</a></th>
+
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html" style="color:black;">Horticulture</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\logistics.html" style="color:black;">Logistics</a></th>
+
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\manipurtourismscheme.html" style="color:black;">Scheme</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\manipurtourismpolicy.html" style="color:black;">Policy</a></th>
+
+
+</tr>
+</table>
+
+
+
+
+
+
+
+
+<h2 style="text-align:center; background-color:#FEF2F4;" >Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\Mt1.jpg" style="width:100%" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\Mt2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\Mt3.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\Mt11.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\Mt10.webp" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\Mt8.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\Mt1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Best Places">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\Mt2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Beauty of Manipur">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\Mt3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Lakes">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\Mt11.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Mountains">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\Mt10.webp" style="width:100%" onclick="currentSlide(5)" alt="A Beautiful Day">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\Mt8.jpg" style="width:100%" onclick="currentSlide(6)" alt="Nature">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
+
+
+
+
+
+<marquee  bgcolor="EAE3D2" scrollamount="10" behavior="alternate" direction="left" width="1500" height="50" <center>
+<center><font face="cooper black" color="black" size="6" alignment="centre">Manipur</font>
+
+</marquee>
+
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\m1.webp"></th>
+<th><h1>Loktak Lake </h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>	Loktak Lake is one of the most famous tourist attractions in Manipur, located 53 kms from Imphal. Considered as one of the famous lakes in India, Loktak boasts of circular floating swamps, which is locally called phumdis. Sendra Island of Manipur is situated amid the lake and spread over 300 square mt, which makes it popular for boating, picnic, and photography. It also supplies water for irrigation and hydel power to nearby areas.
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1>Keibul Lamjao National Park</h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="‪C:\Users\DELL\Desktop\Shillong Images\m2.webp"></td></tr>
+
+
+
+<tr><td><p>Encircling the Loktak Lake, Keibul Lamjao National Park is best known for floating flora of phumdis and endangered brow-antlered deer or sangai. Offering mesmeric views of the lake, this national park, sprawling over 40 sq. km is one of the most beautiful Manipur tourist attractions. Moreover, Keibul Lamjao National Park is also known to be World’s only floating sanctuary and quite popular amongst nature lovers, wildlife enthusiasts, and ornithologists.
+
+Besides being home to animals like sambar, wild boar, hog deer and jungle cat, this place boasts of a large number of endangered as well as common bird species like East Himalayan pied kingfisher, spotbill duck, ruddy shell-duck, Burmese pied Myna, and Indian white-breasted waterhen.
+
+</p></td></tr>
+
+
+
+</table>
+
+
+
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\m3.webp"></th>
+<th><h1>Tharon Cave </h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>	Tharon Cave or The Uluan Cave is among the fascinating tourist attractions in Manipur. Located near Tamenglong, this 650 m long cave tunnel consists of carvings and excavations of Hovnanian Culture of North Vietnam. Featuring 5 exits and 34 joints, this cave is a favorite amongst trekkers and adventure junkies. Manipur State Tourism Department organizes cave expedition program every year, where people enjoy the thrill of walking through the dim tunnels.
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1>Kangla Fort </h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\m4.webp"></td></tr>
+
+
+
+<tr><td><p>Kangla Fort, which is also known as the Palace of Kangla is located close to Imphal River. Kangla Fort was the administrative seat of various Manipur kings from Nongda Lairen Pakhangba to Maharaja Kulachandra. The remains of the fort speak of Manipur’s rich history and heritage. Comprising of temples, citadel and coronation halls, Kangla Fort is a hot favorite tourist site in Manipur among history buffs, photographers, and architectural enthusiasts.
+
+</p></td></tr>
+
+
+
+</table>
+
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\m5.webp"></th>
+<th><h1>Singda Dam</h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>	Snugly located at about 920 m above sea level, Singda Dam is the highest mud dam in the World and a sight to behold. Overlooking serene Singda Lake, this dam acts as a multi-purpose irrigation project for entire Manipur. The dam is surrounded by lush green paddy fields and hills and is considered as one of the ideal tourist spots in Manipur for picnics, day trips, trekking, and hiking.
+
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1>Shree Govindajee Temple</h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\m6.webp"></td></tr>
+
+
+
+<tr><td><p>One of the most famous Manipur tourist places and most famous temples in Manipur, Shree Govindajee Temple is dedicated to Radha, Krishna, Jagannatha, Balarama, and Govinda. The idol of Govindajee is placed in the central chamber, while other Gods are seen in different chambers in all the four sides of the temple. Located near the Royal Palace, this temple has a red-brick structure and Nagara style of architecture and attracts tourists round the year.
+
+</p></td></tr>
+
+
+
+</table>
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\m7.webp"></th>
+<th><h1>Manipur Zoological Garden</h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>	Established in 1976, Manipur Zoological Garden is among the popular tourist attractions in Manipur, especially among families and kids. Located in Lamphelpat, near Imphal, this zoo sprawls over 8 hectares and surrounded by lush green mountains. This is the habitat of many common as well as rare animals like Sangai, Wild boar, deer, hog deer, bear and almost 55 species of birds. Visiting this zoo, spotting wildlife, and enjoying the peaceful ambiance is one of the top things to do in Manipural Pradesh. It is 7km away from the city. A museum which is the repository of the indigenous tribal culture of Arunachal Pradesh known as JawaharLal Nehru Museum is another wonder.
+
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1>Manipur State Museum</h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\m8.webp"></td></tr>
+
+
+
+<tr><td><p>The State Museum is one of the most popular tourist attractions in Manipur. It houses various artifacts, tribal items, ornaments, weapons, textiles, pictures, and sculptures. Established in 1969, Manipur State Museum comprises of many galleries and sections, displaying the heritage of Manipur city. It is also popular for hosting awareness programmes, thematic exhibitions, and cultural appreciation courses. The major attractions of this museum are a 54-feet long royal boat called Hiyag Hiren and a gold-plated human mask with a skull.
+
+</p></td></tr>
+
+
+
+</table>
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\m9.webp"></th>
+<th><h1>Rasmancha</h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>	Rasmancha is a less explored tourist attraction in Manipur. Located in the district of Bishnupur, it was a temple earlier where Ras Festival was celebrated. It was also used to stage dances. Rasmancha is believed to be the oldest pyramidal superstructure shaped brick temple. At present, this temple has become one of the top heritage sites in Manipur and is protected under the Archaeological Survey of India (ASI). It is showcased now a days by lightening at night.
+
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1>Jorebangla Temple </h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\m10.webp"></td></tr>
+
+
+
+<tr><td><p>Jorebangla Temple is another ancient temple in Bishnupur. Also known as Yorubangala, it was built by Malla King, Raghunath Singha Dev  in the year 1655. It boasts of a splendid architectural design depicting the conventional thatched huts of the region. The roofs and walls represent the Chala style while the carved designs depicts scenes from battles and the royal lifestyle. Although not a famous tourist place in the outer world, but is a famous tourist attraction in Manipur.
+
+</p></td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br><br></td></tr>
+</table>
+
+
+<center>
+<table border="0" width="50%" bgcolor="#14274e">
+
+
+<tr>
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>North East State Research</b></font><hr width="250" height="10"></td>
+
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>Menu</b></font><hr width="250" height="10"></td>
+
+
+</tr>
+
+<tr>
+<td>
+<a href="C:\1\grains.html"><font color="white">Arunachal Pradesh, Assam, Meghalaya,<br><br> Tripura,Nagaland, Mizoram, Sikkim, Manipur</a><br>
+
+
+<td>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\contactus.html"><font color="white">Contact Us</a><br><br>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html"><font color="white">About Us</a><br>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+</center>
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br>
+<hr class="rounded">
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+</body>
+</html>

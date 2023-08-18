@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#more {display: none;}
+</style>
+
+
+
+
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 18px 740px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 15px 1280px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #9a7980;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fa {
+  font-size: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+  <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\education.html" class="w3-bar-item w3-button">Education</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\psus.html" class="w3-bar-item w3-button">PSUs</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\governmentagencies.html" class="w3-bar-item w3-button">Government agencies</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\fundingagencies.html" class="w3-bar-item w3-button">Funding agencies </a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\incubationcenters.html" class="w3-bar-item w3-button">Incubation centers</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html" class="w3-bar-item w3-button">Youth Opportunities</a>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html" class="w3-bar-item w3-button">About Us</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\contactus.html" class="w3-bar-item w3-button">Contact Us</a>
+</div>
+
+<div class="w3-teal"bgcolor="red" >
+  <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+  <button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+  <div class="w3-container" bgcolor="#9a7980" >
+      <h1 bgcolor="#e7c89b"><center>Dr. APJ Abdul Kalam Centre for Policy Research and Analysis, IIM
+Shillong</center></h1>
+  </div>
+</div>
+
+
+
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+  
+  
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Search</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="C:\Users\DELL\Desktop\IIM fol\tourism.html">Tourism</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handloom.html">Handloom</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html">Handicraft</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html">Horticulture</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\logistics.html">Logistics</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\education.html">Education</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html">Youth Opportunities</a>
+  </div>
+</div>
+
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="white">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+
+<table colspan="2" border="0" width="100%" height="20" bgcolor="white">
+<tr>
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\tourism.html" style="color:black;">Tourism</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handloom.html" style="color:black;">Handloom</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html" style="color:black;">Handicraft</a></th>
+
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html" style="color:black;">Horticulture</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\logistics.html" style="color:black;">Logistics</a></th>
+
+</tr>
+</table>
+
+
+<table border="0" width="100%" bgcolor="white">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+<img src="C:\Users\DELL\Desktop\Shillong Images\11111.jpg" width="1600" height="600">
+
+
+
+
+
+
+<table bgcolor="#f4ece1">
+
+
+<tr><th><p>Arunachal Pradesh, state of India. It constitutes a mountainous area in the extreme northeastern part of the country and is bordered by the kingdom of Bhutan to the west, the Tibet Autonomous Region of China to the north, Myanmar (Burma) and the Indian state of Nagaland to the south and southeast, and the Indian state of Assam to the south and southwest. The capital is Itanagar.
+
+Arunachal Pradesh, meaning “Land of the Rising Sun,” long has been a recognized region of the Indian subcontinent, receiving mention in such ancient Hindu literature as the Kalika-purana and the epic poems Mahabharata and Ramayana. Formerly known as the North East Frontier Agency (from the British colonial era), the area was part of Assam until it was made the Indian union territory of Arunachal Pradesh in 1972, and in 1987 it became an Indian state. The region, however, has been the subject of an ongoing sovereignty dispute between India and China. Area 32,333 square miles (83,743 square km). Pop. (2011) 1,382,611.</p></th></tr>
+</th></tr>
+</table>
+
+
+<table bgcolor="#e6cdcd">
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\arunachalpradeshpeopleandculture.jpg" style="width:450" height="400" ></th>
+<th><h1>People and Culture</h1></th></tr>
+<tr><td rowspan="2"><p>Arunachal Pradesh is home to dozens of distinct ethnic groups, most of which are in some ways related to the peoples of Tibet and the hill region of western Myanmar. More than two-thirds of the state’s people are designated officially as Scheduled Tribes, a term that generally applies to indigenous peoples who fall outside of the prevailing Indian social structure. In western Arunachal Pradesh the Nissi (Nishi or Dafla), Sherdukpen, Aka, Monpa, Apa Tani, and Hill Miri are among the main tribes. The Adi, who constitute the largest tribal group in the state, live in the central region. The Mishmi inhabit the northeastern hills, and the Wancho, Nocte, and Tangsa are concentrated in the southeastern district of Tirap. Throughout the state, the tribal peoples generally share similar rural lifestyles and occupations; many are subsistence farmers who supplement their diet by hunting, fishing, and gathering forest products. Dispersed villages and isolated farmsteads are typical features of the landscape. Aside from the Scheduled Tribes, much of the remainder of the population of Arunachal Pradesh consists of immigrants from Bangladesh, as well as from Assam, Nagaland, and other states of India.
+
+The tribal groups speak about 50 languages and dialects, most belonging to the Tibeto-Burman branch of the Sino-Tibetan language family. They are often mutually unintelligible; thus, Assamese and Hindi, both of which are Indo-Aryan languages, as well as English are used as lingua francas in the region. Each of the tribes follows its own social, cultural, and religious practices, and most are endogamous (marrying within the group). Many of the groups practice local religions that involve interaction with various spirits and deities of nature. Ritual sacrifice is common, and a domesticated gaur (wild ox), locally known as a mithun, is especially valued as a sacrificial animal. Some residents of Arunachal Pradesh practice Hinduism, especially those near the lowlands approaching the border with Assam. Tibetan Buddhism is found among groups near the Tibetan border, and some tribes along the Myanmar border practice Theravada Buddhism, which is predominant in Southeast Asia.
+
+Arunachal Pradesh has the lowest population density of any state in India. Most of the populace is concentrated in the low-lying valleys, with the hill peoples living in scattered upland communities. There are no cities and fewer than two dozen towns. Itanagar, in the southwest of Arunachal Pradesh, is the state’s largest town.   
+
+Economy
+More than half of the population of Arunachal Pradesh is engaged in agriculture, but only a tiny portion of the land is under cultivation. Although settled agriculture, including wet-rice farming, has expanded considerably since the late 20th century, many of the hill peoples continue to practice shifting agriculture (jhum), whereby land is cleared by burning the vegetation, is cultivated for several years, and then is abandoned in favour of another site when the productivity of the soil declines. Rice, corn (maize), millet, and buckwheat are among the chief crops grown by that method. Major commercial crops include oilseeds, potatoes, ginger, sugarcane, and vegetables.
+
+Mithuns are widely kept, and yaks are important in the higher elevations. The Monpa herd sheep. Some groups also raise fish through aquaculture.
+
+Arunachal Pradesh, with its abundance of forest cover, once derived a significant portion of its gross state product from logging and forestry. Production has dropped dramatically since the 1970s, however, largely in response to environmental legislation. In the early 21st century, forestry supported just a few local industries of small or moderate size.
+</p></td></tr>
+
+
+</table>
+<table bgcolor="#e7c89b">
+<tr><td><center><h1>More About Arunachal Pradesh</h1></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\moreaboutarunachalpradesh.jpg" style="width:450" height="400" ></td></tr>
+
+
+
+<tr><td><p>Arunachal Pradesh has significant, though largely unutilized, resource potential. Among its resources for generating energy are rivers, coal, and petroleum; most of the state’s power is provided by hydroelectric plants. In addition to hydrocarbons, other mineral resources of Arunachal Pradesh include dolomite, quartzite, limestone, and marble. Efforts have been made in the early 21st century to expand hydroelectric and solar power generation.The state’s manufacturing sector consists primarily of medium- and small-scale industries. Basketry, weaving, and carpets are the main handicraft manufactures. Smaller-scale industries include rice and vegetable-oil milling, fruit processing, the manufacture of forest-based products, and steel fabrication. Sericulture (raw silk production) also is important, and the state produces many varieties of silk yarns. Industrial expansion has been encouraged by the state’s economic development policies, and industrial estates have been established at Itanagar and neighbouring Naharlagun (formerly Old Itanagar), as well as at Pasighat and Deomali.
+<br>
+<h4>Government</h4><br>
+Arunachal Pradesh is a constituent unit of the Republic of India, and, as such, the structure of its government, like that of most Indian states, is defined by the national constitution of 1950. The governor, appointed by India’s president, is head of state and is aided by an elected chief minister, a Council of Ministers, and a unicameral Legislative Assembly (Vidhan Sabha).
+
+At the local level, the state comprises more than one dozen districts. In general, those districts are parceled into a number of subdivisions, which encompass several blocks, towns, circles, and villages. Villages are the smallest administrative units.
+
+Arunachal Pradesh does not have its own high court. Rather, the state falls under the jurisdiction of the high court in Guwahati, Assam. To handle cases from Arunachal Pradesh more effectively, however, a permanent bench of the Guwahati High Court has been established at Itanagar, with a chief justice appointed by the chief justice in Assam. Any case from Arunachal Pradesh may be referred to Guwahati, should the chief justice in Itanagar deem it necessary.
+<br><br>
+
+
+</td></tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Despite the presence of numerous primary, middle, and secondary schools, the literacy rate in Arunachal Pradesh continued to rank among the lowest in India in the early 21st century. There are a number of postsecondary institutions, including Arunachal University at Itanagar, which was founded in 1984. The state also has specialized colleges focusing on such fields as education, engineering, industry, and forestry and agriculture.<span id="dots">...</span><span id="more"> Following the subsequent defeat of Gorkha, the Chinese Qing dynasty established control over Sikkim.[29]
+Tribal peoples in Arunachal Pradesh wear distinctive garments and headdress. The art of weaving is especially important, and textile designs are unique to each group. Dances are an integral part of community life. Losar, Mopin, and Solung are major tribal festivals. At such festivals, villagers often drink millet or rice beer, as well as tea.
+
+
+
+
+
+</span></p>
+<button onclick="myFunction()" id="myBtn">Read more</button>
+
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br><br></td></tr>
+</table>
+
+
+<center>
+<table border="0" width="50%" bgcolor="#14274e">
+
+
+<tr>
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>North East State Research</b></font><hr width="250" height="10"></td>
+
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>Menu</b></font><hr width="250" height="10"></td>
+
+
+</tr>
+
+<tr>
+<td>
+<a href="C:\1\grains.html"><font color="white">Arunachal Pradesh, Assam, Meghalaya,<br><br> Tripura,Nagaland, Mizoram, Sikkim, Manipur</a><br>
+
+
+<td>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\contactus.html"><font color="white">Contact Us</a><br><br>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html"><font color="white">About Us</a><br>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+</center>
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br>
+<hr class="rounded">
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+

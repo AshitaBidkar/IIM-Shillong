@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 18px 740px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 15px 1280px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #9a7980;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fa {
+  font-size: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+  <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\education.html" class="w3-bar-item w3-button">Education</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\psus.html" class="w3-bar-item w3-button">PSUs</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\governmentagencies.html" class="w3-bar-item w3-button">Government agencies</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\fundingagencies.html" class="w3-bar-item w3-button">Funding agencies </a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\incubationcenters.html" class="w3-bar-item w3-button">Incubation centers</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html" class="w3-bar-item w3-button">Youth Opportunities</a>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html" class="w3-bar-item w3-button">About Us</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\contactus.html" class="w3-bar-item w3-button">Contact Us</a>
+</div>
+
+<div class="w3-teal"bgcolor="red" >
+  <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+  <button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+  <div class="w3-container" bgcolor="#9a7980" >
+      <h1 bgcolor="#e7c89b"><center>Dr. APJ Abdul Kalam Centre for Policy Research and Analysis, IIM
+Shillong</center></h1>
+  </div>
+</div>
+
+
+
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+  
+  
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Search</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="C:\Users\DELL\Desktop\IIM fol\tourism.html">Tourism</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handloom.html">Handloom</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html">Handicraft</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html">Horticulture</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\logistics.html">Logistics</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\education.html">Education</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html">Youth Opportunities</a>
+  </div>
+</div>
+
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="white">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+
+<table colspan="2" border="0" width="100%" height="20" bgcolor="white">
+<tr>
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\tourism.html" style="color:black;">Tourism</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handloom.html" style="color:black;">Handloom</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html" style="color:black;">Handicraft</a></th>
+
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html" style="color:black;">Horticulture</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\logistics.html" style="color:black;">Logistics</a></th>
+
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table>
+<tr><th rowspan="3"><img src="C:\Users\DELL\Desktop\Shillong Images\apapapap.jpg" style="width:450" height="400" ></th>
+<th><h1>Arunachal Pradesh</h1></th></tr>
+<tr><td rowspan="3"><center><p>The traditional art of creating wonderful articles from the very common material available have been passed on from generation after generation in the state. Even today the people make most of their household items own their own. Be it utensils, baskets, tables or their dresses, they know how to make it all. Different regions are famous for different craftsmanship. Some are known for designing colourful masks, wooden vessels and silver objects, some are expert in making cane and bamboo articles while others have long perfected the art of wood carving.
+
+</p><br><p style="color:blue;"><a href="C:\Users\DELL\Desktop\IIM fol\arunachalpradeshhandicraft.html"><p style="color:blue;"><input type="button" value="Click Here To Know More" style="width:230px;height:55px;background-color:white;color:blue"></center>
+</p></td></tr>
+</table>
+
+
+
+<table><tr>
+
+<td><center><h1>Tripura</h1></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\trtrtr.jpg" style="width:450" height="400" ></td></tr>
+<tr>
+<td><center><p>The different ethnic groups of the state are perfect in bamboo and cane work. Some of the attractive handicrafts of the state are room divider, decorated wall panels,silver jewellery, lamps, furniture of cane, ornamental articles, bamboo dining table mats and floor mats. The artisans of Tripura weave wonderful fabrics with great designs. The typical handloom consists of vertical and horizontal stripes with colourful embroidery.
+
+
+Each tribe of Tripura is famous for its own special handicrafts. Handloom and cane and bamboo are the oldest industries here. The craftsmen pick up simple materials such as cane, bamboo, palm leaves and yarn and fashion extremely beautiful articles out of them.
+</p><br><p style="color:blue;"><a href="C:\Users\DELL\Desktop\IIM fol\tripurahandicraft.html"><p style="color:blue;"><input type="button" value="Click Here To Know More" style="width:230px;height:55px;background-color:white;color:blue"></center></tr>
+</table>
+
+
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\as.jpg" style="width:450" height="400" ></th>
+<th><h1>Assam</h1></th></tr>
+<tr>
+<td rowspan="2"><center><p>
+HomeAssamInformation  Art and Handicrafts
+Assam Handicrafts
+Art and Handicrafts of Assam
+The richness of the art and handicrafts of Assam beautifully reflects the bountifulness of its culture. The craftsmen here have long perfected the art of creating wonderful objects from very ordinary products. The craftsmen make several handicrafts apart from the famous silk fabric and cane and bamboo products. Different regions of Assam are known for their different forms of art and handicrafts.
+</p><br><p style="color:blue;"><a href="C:\Users\DELL\Desktop\IIM fol\assamhandicraft.html"><p style="color:blue;"><input type="button" value="Click Here To Know More" style="width:230px;height:55px;background-color:white;color:blue"></center></td></tr>
+</table>
+
+
+
+<table>
+<tr><td><center><h1>Manipur</h1></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\manman.webp" style="width:450" height="400" ></td></tr>
+<tr>
+<td><center><p>he people of Manipur are highly skilled in crafting amazing handicrafts. the markets of Manipur are the best places to get the glimpses of the rich heritage of Manipur through its wonderful art and handicrafts. Kauna products, cane and bamboo articles, artistic weaving, woodcarving are the favourites of tourists. The women of Manipur are expert in weaving cotton textiles. Laichamphi (meaning cotton cloth) is the name given to this handicraft of Manipur. Necessity gave birth to the creation of wonderful wooden items.</p><br><p style="color:blue;"><a href="C:\Users\DELL\Desktop\IIM fol\manipurhandicraft.html"><p style="color:blue;"><input type="button" value="Click Here To Know More" style="width:230px;height:55px;background-color:white;color:blue"></center></td></tr>
+</table>
+
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\megmeg.jpg" style="width:450" height="400" ></th>
+<th><h1><center>Meghalaya</center></h1></th></tr>
+<tr>
+<td rowspan="2"><center><p>Meghalaya is an abode of wonderful handicrafts. The state is endowed with a rich tradition of art and handicrafts. The people of Meghalaya have long perfected the art of weaving, be it cane or cloth. The markets of the state can be browsed for such amazing handicrafts. The most prominent art here is woodcarving and cane and bamboo work as the state produces abundant wood material. The craftsmen weave amazing cane mats, winnowing fans,caps, umbrellas, stools and baskets. The special kind of cane mat weaved by the Khasis is known as 'Tlieng' which is highly durable. They are also known for making domestic knives, utensils and even guns. The Garo weave the material used for their dresses called 'Dakmanda'. They also weave shirts, bed covers, bedsheets and tablecloths.
+
+</p><br>
+<p style="color:blue;"><a href="C:\Users\DELL\Desktop\IIM fol\meghalayahandicraft.html"><p style="color:blue;"><input type="button" value="Click Here To Know More" style="width:230px;height:55px;background-color:white;color:blue"></center></a></center></p></td></tr>
+
+
+</table>
+
+
+
+
+<table>
+<tr><td><center><h1>Mizoram</h1></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\mimi.jpeg" style="width:450" height="400" ></td></tr>
+<tr>
+<td><center><p>The artists are highly skilled in transforming simple raw materials into attractive items. The craftsmen of this beautiful North East Indian state are expert in their traditional art of weaving. The weavers use bright colours and traditional designs and patterns on their looms and create wonderful fabrics. A wide variety of cane and bamboo handicrafts are also available in the markets of Mizoram. Simple yet mesmerizing such are the designs of cane and bamboo items. The beautiful handicrafts of Mizoram are also known for their durability.</p><br><p style="color:blue;"><a href="C:\Users\DELL\Desktop\IIM fol\mizoramhandicraft.html"><p style="color:blue;"><input type="button" value="Click Here To Know More" style="width:230px;height:55px;background-color:white;color:blue"></center></td></tr>
+</table>
+
+
+
+
+<table>
+<tr>
+<th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\naga.jpg" style="width:450" height="400" ></th>
+<th><h1>Nagaland</h1></th></tr>
+<tr>
+<td rowspan="2"><center><p>The state is a home to around 16 tribes who have long perfected the art of creating magnificent items from very little resources. By using products from the farms, fields and forests, they make their own clothes, utensils, medicines and objects of ritualistic and aesthetic value. How self sufficient they are! Visit the Naga villages where the the huge village gates, house posts and Morungs speak volumes about the craftsmanship of the people of the state.
+</p><br><p style="color:blue;"><a href="C:\Users\DELL\Desktop\IIM fol\nagalandhandicraft.html"><p style="color:blue;"><input type="button" value="Click Here To Know More" style="width:230px;height:55px;background-color:white;color:blue"></center></p></td></tr>
+</table>
+
+
+
+
+<table>
+<tr><td><center><h1>Sikkim</h1></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\SI.jpg" style="width:450" height="400" ></td></tr>
+<td><center><p>Sikkim is not only popular for its natural beauty but also a destination radiant with impressive handicrafts. In order to preserve and promote this traditional art of Sikkim, the Sikkim Government is establishing several platforms in the form of Handicraft and Handloom Institutes.</p>
+<br><p style="color:blue;"><a href="C:\Users\DELL\Desktop\IIM fol\sikkimhandicraft.html"><p style="color:blue;"><input type="button" value="Click Here To Know More" style="width:230px;height:55px;background-color:white;color:blue"></center></p></td></tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br><br></td></tr>
+</table>
+
+
+<center>
+<table border="0" width="50%" bgcolor="#14274e">
+
+
+<tr>
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>North East State Research</b></font><hr width="250" height="10"></td>
+
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>Menu</b></font><hr width="250" height="10"></td>
+
+
+</tr>
+
+<tr>
+<td>
+<a href="C:\1\grains.html"><font color="white">Arunachal Pradesh, Assam, Meghalaya,<br><br> Tripura,Nagaland, Mizoram, Sikkim, Manipur</a><br>
+
+
+<td>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\contactus.html"><font color="white">Contact Us</a><br><br>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html"><font color="white">About Us</a><br>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+</center>
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br>
+<hr class="rounded">
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+</body>
+</html>

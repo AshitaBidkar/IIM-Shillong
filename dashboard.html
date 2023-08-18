@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 600px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+     #myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+ 
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  visibility: none;
+}
+
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+   
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-1 sidenav hidden-xs">
+      <h2></h2>
+      <ul class="nav nav-pills nav-stacked">
+        
+          <li class="active"><a href="#">DASHBOARD</a></li>
+        <li><a href="C:\Users\DELL\Desktop\IIM SHILLONG.html">HOME</a></li>
+        <li><a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html">ABout Us </a></li>
+        
+        <li><a href="C:\Users\DELL\Desktop\IIM fol\contactus.html">CONTACT US</a></li>
+        
+      </ul><br>
+    </div>
+    <br>
+    
+    <div class="col-sm-11">
+      <div class="well">
+          <p>DASHBOARD
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search For State Or Search For Sector">
+       
+      
+<ul id="myUL">
+  <li><a href="C:\Users\DELL\Desktop\IIM fol\arunachalpradesh.html">Arunachal Pradesh</a></li>
+  <li><a href="C:\Users\DELL\Desktop\IIM fol\assam.html">Assam </a></li>
+  <li><a href="C:\Users\DELL\Desktop\IIM fol\manipur.html">Manipur</a></li>
+  <li><a href="C:\Users\DELL\Desktop\IIM fol\meghalaya.html">Meghalaya</a></li>
+  <li><a href="C:\Users\DELL\Desktop\IIM fol\mizoram.html">MIzoram</a></li>
+  <li><a href="C:\Users\DELL\Desktop\IIM fol\researchnegaland.html">Nagaland</a></li>
+  <li><a href="C:\Users\DELL\Desktop\IIM fol\sikkimresearch.html">Sikkim</a></li>
+  <li><a href="C:\Users\DELL\Desktop\IIM fol\tripura.html">Tripura</a></li>
+  
+  
+</ul>
+   
+     
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+              
+    </div>
+            
+        <div class="col-sm-6">
+            <div class="well">
+                 <img src="C:\Users\DELL\Desktop\Shillong Images\map.jpeg" width="630" height="350"></div>
+        </div>
+       
+      
+        <div class="col-sm-6">
+            <div class="well">
+           
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<body>
+
+<canvas id="myChart" style="width:100%;max-width:750px"></canvas>
+
+<script>
+var xValues = ["Arunachal Pradesh", "Assam", "Meghalaya", "Manipur", "Mizoram","Nagaland", "Tripura", "Sikkim"];
+var yValues = [95, 90, 80, 70,60,50,40,30,20];
+var barColors = ["red", "green","blue","orange","brown","black","gray","pink"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Best Tourist Places To Visit In Northeast India "
+    }
+  }
+});
+</script>
+
+          </div>
+        </div>
+           
+        
+        <div class="col-sm-8">
+            <div class="well">
+     
+    
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+
+<canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var xValues = ["Tourism", "Handloom", "Handicraft", "Horticulture", "LOgistics","Bpo", "Education"];
+var yValues = [58, 88, 68, 52,42,38,56];
+var barColors = ["red", "green","blue","orange","brown","black","gray","pink"];
+
+new Chart("myChart3", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Data Statistic Of N.E State From 2017-2022"
+    }
+  }
+});
+</script>
+
+          </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="well">
+                       <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <a href='https://embed-map.org/'></a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=5cc941323e94fe00bba3ebf1602d1bb83712c070'></script>
+<script type="text/javascript" src="https://freevisitorcounters.com/en/home/counter/998358/t/6"></script>
+    
+            </div>
+        </div>
+       
+    </div>
+  </div>
+</div>
+</body>
+</html>
