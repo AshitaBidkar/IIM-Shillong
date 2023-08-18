@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 18px 740px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 15px 1280px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #9a7980;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fa {
+  font-size: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+  <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\education.html" class="w3-bar-item w3-button">Education</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\psus.html" class="w3-bar-item w3-button">PSUs</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\governmentagencies.html" class="w3-bar-item w3-button">Government agencies</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\fundingagencies.html" class="w3-bar-item w3-button">Funding agencies </a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\incubationcenters.html" class="w3-bar-item w3-button">Incubation centers</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html" class="w3-bar-item w3-button">Youth Opportunities</a>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html" class="w3-bar-item w3-button">About Us</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\contactus.html" class="w3-bar-item w3-button">Contact Us</a>
+</div>
+
+<div class="w3-teal"bgcolor="red" >
+  <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+  <button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+  <div class="w3-container" bgcolor="#9a7980" >
+      <h1 bgcolor="#e7c89b"><center>Dr. APJ Abdul Kalam Centre for Policy Research and Analysis, IIM
+Shillong</center></h1>
+  </div>
+</div>
+
+
+
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+  
+  
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Search</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="C:\Users\DELL\Desktop\IIM fol\tourism.html">Tourism</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handloom.html">Handloom</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html">Handicraft</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html">Horticulture</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\logistics.html">Logistics</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\education.html">Education</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html">Youth Opportunities</a>
+  </div>
+</div>
+
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="white">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+
+<table colspan="2" border="0" width="100%" height="20" bgcolor="white">
+<tr>
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\tourism.html" style="color:black;">Tourism</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handloom.html" style="color:black;">Handloom</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html" style="color:black;">Handicraft</a></th>
+
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html" style="color:black;">Horticulture</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\logistics.html" style="color:black;">Logistics</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\tripuratourismscheme.html" style="color:black;">Scheme</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\tripuratourismpolicy.html" style="color:black;">Policy</a></th>
+
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+<h2 style="text-align:center; background-color:#FEF2F4;" >Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\Ttmainmain.jpg" style="width:100%" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\Tt6.webp" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\Tt2.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\Tt77.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\TT3.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\Tt5.webp" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\Ttmainmain.jpg" style="width:100%" onclick="currentSlide(1)" alt="Best Places">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\Tt6.webp" style="width:100%" onclick="currentSlide(2)" alt="Beauty of Tripura">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\Tt2.jpg" style="width:100%" onclick="currentSlide(3)" alt="Visit Tripura">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\Tt77.jpg" style="width:100%" onclick="currentSlide(4)" alt="A Beautiful Day">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\TT3.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\Tt5.webp" style="width:100%" onclick="currentSlide(6)" alt="Sunrise">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
+
+
+
+
+
+<marquee  bgcolor="EAE3D2" scrollamount="10" behavior="alternate" direction="left" width="1500" height="50" <center>
+<center><font face="cooper black" color="black" size="6" alignment="centre">Tripura</font>
+
+</marquee>
+
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\T1.webp"></th>
+<th><h1>Amarpura</h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>Amarpura is one of the best places to visit in Tripura and is considered as an ideal picnic spot. People often drive here over weekends to sit and pass their day on the banks of the Amar Sagar lake which is an artificial lake built in the 16th century. The city mostly stands on ancient ruins and also has a temple dedicated to Mangalchand (the eight-headed goddess). Also, if you go there during February, a fair is held to celebrate the month of flowers. There are two other lakes in this place – Dumboor Lake and Chobimura. Water Sports facility is also available in Amarpura. Other than this there are various other fairs and events held in this place to keep people visiting this place engaged all year round.
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1>Melaghar</h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\T2.webp"></td></tr>
+
+
+
+<tr><td><p>Melaghar is also a town located 50 km from Agartala. The place is famous for Neermahal which is situated in the middle of Rudrasagar Lake. The place has got very peaceful vibes. It is also famous for Durga Puja Festival. The entire town looked blessed when it is lit with beautiful lights during this festival. There are various puja pandals played across the roads and everybody seems to enjoy it. Another festival, which is dearly celebrated in Melaghar is Ratha Yatra which is held every year in July. To satisfy your spirit for shopping you can come down to Anandabazar which has everything right from daily staples to big showrooms to cater to all your needs. Other popular places to visit in Tripura include Veeramma Kali Mandir, Pagli Masi Temple, and Melaghar Kali Temple.
+
+</p></td></tr>
+
+
+
+</table>
+
+
+
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\T3.webp"></th>
+<th><h1>Kailashahar </h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>	Kailashahar is another town in the state of Tripura and is located very near to Bangladesh borders which makes it one of the best places to visit in Tripura. The town was the capital of Tripura in ancient times and have roots associated with Unakoti. The main festival of Kailashahar is Durga puja and the city is decorated with fancy lights and Goddess Durga pandals. The town is blessed with beautiful landscapes and lush green gardens. The main tourist attractions here are Lakhi Narayan Bari and Chouddo Devotar Temple. Also, there are several tea estates around the town. Some of them are managed privately and most of them are famous for organic tea that they grow here.
+
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1>Dharamnagar</h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\T4.webp"></td></tr>
+
+
+
+<tr><td><p>Dharamnagar is the second-largest city in Tripura next to Agartala and is located in the north part of Tripura. The place is known for naturally beautiful landscapes. There are several top-quality boarding schools located in this city. The temperature is always mild here, both in winters and summers. However, the place is adorned with very heavy rainfalls. The city is built over ancient ruins and is known for many famous historical monuments. Haflong is a famous tea garden which is known for its beauty and lies just a short distance from Dharamnagar. Also, Unakoti which is an ancient site with huge rock-cut images lies near Dharmanagar.
+
+</p></td></tr>
+
+
+
+</table>
+
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\T5.webp"></th>
+<th><h1>Udaipur</h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>	Udaipur was earlier known as Rangamati and is a town in Tripura and is famous for its Sundari Temple which is one of the religious places to visit in Tripura. The place is located on the bed of artificial lakes and is at around 55 km from Agartala. Some of the artificial lakes located in his town are – Dhani Sagar, Bijoy Sagar, Jagannath Dighi, Amar Sagar. The city is located on the banks of the Gomai River and has several temples. But the most popular is the Tripura Sundari Temple, which is also part of 51 Shakti Peethas. There is a big lake beside this temple which is called Kalyan Sagar. Another famous temple here is Bhubaneshwar Temple. Because so many lakes are located in his city, it is also called the city of lakes. Book lovers can find their mecca in Nazrul Granthagar library in Udaipur which was christened after Nazrul Islam.
+
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1>Ambassa </h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\T6.webp"></td></tr>
+
+
+
+<tr><td><p>Ambassa is another beautiful city in Tripura and is very famous for ancient temples held in this place. The picturesque landscape and rich culture of Ambassa makes it one of the most popular cities in Tripura. A few places of attraction in this city are Pilak, Chabimura, Neermahal Palace, Ujjayanta Palace, Gumti Wildlife Sanctuary, Jagannath Temple. Many other temples in this city keep lit and you engaged while you are here. There is a massive juice plant in Nalkata which is around 38 km away from Ambassa and is one of the major attractions amongst tourists coming here. Also, several handicraft shops are located near to this juice plant.
+
+</p></td></tr>
+
+
+
+</table>
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\T7.webp"></th>
+<th><h1>Jampui Hills </h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>Jampui Hills are located in the Northern part of Tripura and is one of the most famous places to visit in Tripura. These hills are located at an altitude of 1000 meters above sea level. The place is blessed with beautiful valleys and splendid sceneries and is a land of juicy oranges. The top attractions of this city are Ujjayanta Palace, Sepahijala Wildlife sanctuary, and Chittagong Hills. The best time to visit Jampui Hills is in November. The sanctuary is full of a great variety of wildlife species and also has a research center. You can find as many as 150 different species of birds in this sanctuary.
+
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1> Unakoti </h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\T8.webp"></td></tr>
+
+
+
+<tr><td><p>Translating to ‘one less than a crore’ in English, Unakoti is one of the most intriguing places to see in Tripura for those who seek something unique. This place is sitting near the Kailasahwar town and is home to hundreds and thousands of massive structures that are rock-cut and spellbinding. This spot is home to numerous scattered ruins of the temples, making Unakoti a unique place with an ancient aura encircling the atmosphere.
+
+</p></td></tr>
+
+
+
+</table>
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\T9.webp"></th>
+<th><h1>Sepahijala Wildlife Sanctuary</h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>	For all the animal and plant admirers out there in the world, Sepahijala Wildlife Sanctuary is one of the exciting places to see in Tripura. This wildlife sanctuary is spread over approximately 19 kilometers and is home to some enchanting species of flora and fauna. There is an extensive variety of local and migratory birds that can be found here. The floors of the sanctuary are also covered with coffee and rubber plantations that are a treat for the eyes and soul both.
+
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1> Neermahal Palace </h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\T10.webp"></td></tr>
+
+
+
+<tr><td><p>One of the famous tourist places in Tripura, Neermahal Palace is sitting right in the heart of Rudrasagar Lake. This Palace not only gives one a chance to witness a scintillating structure but also beholds the beauty of its surroundings. The name translates to ‘water palace’ in English and justifies the name to the T. When it comes to the seven wonders of this country, Neermahal Palace found itself a spot in the list. Founded by Martin & Burns Co., this Palace is home to a royal Antar Mahal, a guest room, a playing room, a courtyard, and much more!
+
+</p></td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br><br></td></tr>
+</table>
+
+
+<center>
+<table border="0" width="50%" bgcolor="#14274e">
+
+
+<tr>
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>North East State Research</b></font><hr width="250" height="10"></td>
+
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>Menu</b></font><hr width="250" height="10"></td>
+
+
+</tr>
+
+<tr>
+<td>
+<a href="C:\1\grains.html"><font color="white">Arunachal Pradesh, Assam, Meghalaya,<br><br> Tripura,Nagaland, Mizoram, Sikkim, Manipur</a><br>
+
+
+<td>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\contactus.html"><font color="white">Contact Us</a><br><br>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html"><font color="white">About Us</a><br>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+</center>
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br>
+<hr class="rounded">
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+</body>
+</html>

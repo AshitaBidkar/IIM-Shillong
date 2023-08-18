@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 18px 740px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 15px 1280px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #9a7980;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fa {
+  font-size: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+  <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\education.html" class="w3-bar-item w3-button">Education</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\psus.html" class="w3-bar-item w3-button">PSUs</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\governmentagencies.html" class="w3-bar-item w3-button">Government agencies</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\fundingagencies.html" class="w3-bar-item w3-button">Funding agencies </a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\incubationcenters.html" class="w3-bar-item w3-button">Incubation centers</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html" class="w3-bar-item w3-button">Youth Opportunities</a>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html" class="w3-bar-item w3-button">About Us</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\contactus.html" class="w3-bar-item w3-button">Contact Us</a>
+</div>
+
+<div class="w3-teal"bgcolor="red" >
+  <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+  <button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+  <div class="w3-container" bgcolor="#9a7980" >
+      <h1 bgcolor="#e7c89b"><center>Dr. APJ Abdul Kalam Centre for Policy Research and Analysis, IIM
+Shillong</center></h1>
+  </div>
+</div>
+
+
+
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+  
+  
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Search</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="C:\Users\DELL\Desktop\IIM fol\tourism.html">Tourism</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handloom.html">Handloom</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html">Handicraft</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html">Horticulture</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\logistics.html">Logistics</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\education.html">Education</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html">Youth Opportunities</a>
+  </div>
+</div>
+
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="white">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+
+<table colspan="2" border="0" width="100%" height="20" bgcolor="white">
+<tr>
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\tourism.html" style="color:black;">Tourism</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handloom.html" style="color:black;">Handloom</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html" style="color:black;">Handicraft</a></th>
+
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html" style="color:black;">Horticulture</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\logistics.html" style="color:black;">Logistics</a></th>
+
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table>
+<tr><th rowspan="3"><img src="C:\Users\DELL\Desktop\Shillong Images\tourismarunachalmain.jpg" style="width:450" height="400" ></th>
+<th><h1>Arunachal Pradesh</h1></th></tr>
+<tr><td rowspan="3"><center><p>Arunachal Pradesh offers various opportunities for youth, including government schemes such as the Arunachal Pradesh Youth Policy, Chief Minister's Yuva Kaushal Yojana, and Chief Minister's Yuva Sochana Yojana. The state also provides skill development programs and entrepreneurship schemes through the Arunachal Pradesh Skill Development Mission and Arunachal Pradesh Rural Bank. Private organizations such as the Arunachal Pradesh Youth Foundation and Arunachal Pradesh Youth Congress also offer platforms for youth to engage in social and political activities. However, challenges such as limited access to education and employment opportunities persist, requiring further efforts to support youth in the state.
+
+
+
+
+</p><br><p style="color:blue;"><a href="C:\Users\DELL\Desktop\IIM fol\youthopportunityarunachalpradesh.html"><p style="color:blue;"><input type="button" value="Click Here To Know More" style="width:230px;height:55px;background-color:white;color:blue"></center>
+</p></td></tr>
+</table>
+
+
+
+<table><tr>
+
+<td><center><h1>Tripura</h1></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\tourismtripura.jpeg" style="width:450" height="400" ></td></tr>
+<tr>
+<td><center><p>Tripura offers various opportunities for youth, including government schemes such as the Chief Minister's Startup Scheme, Youth Entrepreneurship Development Programme, and the Mukhyamantri Yuba Yogayog Yojana. The state also has a strong focus on skill development, with initiatives such as the Tripura Skill Development Mission and Industrial Training Institutes. Private organizations such as the Youth Innovative Society and Tripura Youth League also provide platforms for youth to engage in social and cultural activities. However, challenges such as limited job opportunities and inadequate infrastructure persist, requiring further efforts to support youth in the state.
+ </p><br><p style="color:blue;"><a href="C:\Users\DELL\Desktop\IIM fol\youthopportunitytripura.html"><p style="color:blue;"><input type="button" value="Click Here To Know More" style="width:230px;height:55px;background-color:white;color:blue"></center></tr>
+</table>
+
+
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\tourismassam.jpeg" style="width:450" height="400" ></th>
+<th><h1>Assam</h1></th></tr>
+<tr>
+<td rowspan="2"><center><p>Assam offers various opportunities for youth, including government schemes such as the Assam Youth Policy, Deen Dayal Upadhyaya Swavalamban Yojana, and the Chief Minister's Startup Scheme. The state also provides skill development programs and entrepreneurship schemes through the Assam Skill Development Mission and the Assam Industrial Development Corporation. Private organizations such as the Assam Youth Foundation and the Youth Startup Network also offer platforms for youth to engage in social and entrepreneurial activities. However, challenges such as limited access to education and employment opportunities persist, requiring further efforts to support youth in the state.
+</p><br><p style="color:blue;"><a href="C:\Users\DELL\Desktop\IIM fol\youthopportunityassam.html"><p style="color:blue;"><input type="button" value="Click Here To Know More" style="width:230px;height:55px;background-color:white;color:blue"></center></td></tr>
+</table>
+
+
+
+<table>
+<tr><td><center><h1>Manipur</h1></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\tourismmanipur.jpeg" style="width:450" height="400" ></td></tr>
+<tr>
+<td><center><p>Manipur offers various opportunities for youth, including government schemes such as the Manipur State Youth Policy, Chief Minister's Youth Employment Scheme, and the Manipur Startup Scheme. The state also provides skill development programs and entrepreneurship schemes through the Manipur State Skill Development Society and the Manipur State Rural Livelihoods Mission. Private organizations such as the Manipur Youth Development Association and the Manipur Entrepreneurship and Startup Network also offer platforms for youth to engage in social and business activities. However, challenges such as limited job opportunities and infrastructure persist, requiring further efforts to support youth in the state.
+
+</p><br><p style="color:blue;"><a href="C:\Users\DELL\Desktop\IIM fol\youthopportunitymanipur.html"><p style="color:blue;"><input type="button" value="Click Here To Know More" style="width:230px;height:55px;background-color:white;color:blue"></center></td></tr>
+</table>
+
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\tourismmeghalaya.jpg" style="width:450" height="400" ></th>
+<th><h1><center>Meghalaya</center></h1></th></tr>
+<tr>
+<td rowspan="2"><center><p>Meghalaya offers various opportunities for youth, including government schemes such as the Meghalaya Youth Policy, Chief Minister's Youth Entrepreneurship Scheme, and the Meghalaya Startup Mission. The state also provides skill development programs and entrepreneurship schemes through the Meghalaya State Skill Development Society and the Meghalaya Rural Livelihoods Society. Private organizations such as the Meghalaya Youth Federation and the Meghalaya Youth Icon also offer platforms for youth to engage in social and cultural activities. However, challenges such as limited access to education and employment opportunities persist, requiring further efforts to support youth in the state.
+
+
+
+
+
+</p><br>
+<p style="color:blue;"><a href="C:\Users\DELL\Desktop\IIM fol\youthopportunitymeghalaya.html"><p style="color:blue;"><input type="button" value="Click Here To Know More" style="width:230px;height:55px;background-color:white;color:blue"></center></a></center></p></td></tr>
+
+
+</table>
+
+
+
+
+<table>
+<tr><td><center><h1>Mizoram</h1></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\tourismmizoram.jpg" style="width:450" height="400" ></td></tr>
+<td><center><p>Mizoram offers various opportunities for youth, including government schemes such as the Mizoram Youth Policy, Chief Minister's Rural Youth Fellowship Programme, and the Mizoram State Entrepreneurship Development Scheme. The state also provides skill development programs and entrepreneurship schemes through the Mizoram State Skill Development Society and the Mizoram State Rural Livelihoods Mission. Private organizations such as the Mizoram Youth Association and the Mizoram Youth Forum also offer platforms for youth to engage in social and cultural activities. However, challenges such as limited job opportunities and inadequate infrastructure persist, requiring further efforts to support youth in the state.
+
+</p><br><p style="color:blue;"><a href="C:\Users\DELL\Desktop\IIM fol\youthopportunitymizoram.html"><p style="color:blue;"><input type="button" value="Click Here To Know More" style="width:230px;height:55px;background-color:white;color:blue"></center></p></td></tr>
+</table>
+
+
+
+
+<table>
+<tr>
+<th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\tourismnagaland.jpeg" style="width:450" height="400" ></th>
+<th><h1>Nagaland</h1></th></tr>
+<tr>
+<td rowspan="2"><center><p>Nagaland offers various opportunities for youth, including government schemes like Startup Nagaland, Nagaland Skill Development Mission, and Youth Resources and Sports. Private organizations such as NagaTech, Incubation Centre Kohima, and North East Cane and Bamboo Development Council also provide platforms for innovation and entrepreneurship. The state's traditional arts and crafts, music, and sports also offer avenues for young people to showcase their talents. However, the youth in Nagaland face challenges such as limited job opportunities and inadequate infrastructure, requiring further efforts to support their growth and development.
+
+</p><br><p style="color:blue;"><a href="C:\Users\DELL\Desktop\IIM fol\youthopportunitynagaland.html"><p style="color:blue;"><input type="button" value="Click Here To Know More" style="width:230px;height:55px;background-color:white;color:blue"></center></p></td></tr>
+</table>
+
+
+
+
+<table>
+<tr><td><center><h1>Sikkim</h1></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\tourismsikkim.jpeg" style="width:450" height="400" ></td></tr>
+<td><center><p>Sikkim offers various opportunities for youth, including government schemes such as the Sikkim Youth Policy, Chief Minister's Startup Scheme, and the Sikkim State Youth Employment Scheme. The state also provides skill development programs and entrepreneurship schemes through the Sikkim State Skill Development Society and the Sikkim State Cooperative Union. Private organizations such as the Sikkim Youth Development Foundation and the Sikkim Entrepreneurship Development Cell also offer platforms for youth to engage in social and business activities. However, challenges such as limited job opportunities and inadequate infrastructure persist, requiring further efforts to support youth in the state.
+
+</p>
+<br><p style="color:blue;"><a href="C:\Users\DELL\Desktop\IIM fol\youthopportunitysikkim.html"><p style="color:blue;"><input type="button" value="Click Here To Know More" style="width:230px;height:55px;background-color:white;color:blue"></center></p></td></tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br><br></td></tr>
+</table>
+
+
+<center>
+<table border="0" width="50%" bgcolor="#14274e">
+
+
+<tr>
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>North East State Research</b></font><hr width="250" height="10"></td>
+
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>Menu</b></font><hr width="250" height="10"></td>
+
+
+</tr>
+
+<tr>
+<td>
+<a href="C:\1\grains.html"><font color="white">Arunachal Pradesh, Assam, Meghalaya,<br><br> Tripura,Nagaland, Mizoram, Sikkim, Manipur</a><br>
+
+
+<td>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\contactus.html"><font color="white">Contact Us</a><br><br>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html"><font color="white">About Us</a><br>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+</center>
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br>
+<hr class="rounded">
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+</body>
+</html>
