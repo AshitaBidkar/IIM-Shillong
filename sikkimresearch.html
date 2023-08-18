@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#more {display: none;}
+</style>
+
+
+
+
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 18px 740px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 15px 1280px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #9a7980;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fa {
+  font-size: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+  <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\education.html" class="w3-bar-item w3-button">Education</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\psus.html" class="w3-bar-item w3-button">PSUs</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\governmentagencies.html" class="w3-bar-item w3-button">Government agencies</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\fundingagencies.html" class="w3-bar-item w3-button">Funding agencies </a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\incubationcenters.html" class="w3-bar-item w3-button">Incubation centers</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html" class="w3-bar-item w3-button">Youth Opportunities</a>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html" class="w3-bar-item w3-button">About Us</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\contactus.html" class="w3-bar-item w3-button">Contact Us</a>
+</div>
+
+<div class="w3-teal"bgcolor="red" >
+  <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+  <button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+  <div class="w3-container" bgcolor="#9a7980" >
+      <h1 bgcolor="#e7c89b"><center>Dr. APJ Abdul Kalam Centre for Policy Research and Analysis, IIM
+Shillong</center></h1>
+  </div>
+</div>
+
+
+
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+  
+  
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Search</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="C:\Users\DELL\Desktop\IIM fol\tourism.html">Tourism</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handloom.html">Handloom</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html">Handicraft</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html">Horticulture</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\logistics.html">Logistics</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\education.html">Education</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html">Youth Opportunities</a>
+  </div>
+</div>
+
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="white">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+
+<table colspan="2" border="0" width="100%" height="20" bgcolor="white">
+<tr>
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\tourism.html" style="color:black;">Tourism</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handloom.html" style="color:black;">Handloom</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html" style="color:black;">Handicraft</a></th>
+
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html" style="color:black;">Horticulture</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\logistics.html" style="color:black;">Logistics</a></th>
+
+</tr>
+</table>
+
+
+<table border="0" width="100%" bgcolor="white">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+<img src="C:\Users\DELL\Desktop\Shillong Images\Sikkim-tour-01.jpg" width="1600" height="600">
+
+
+
+
+
+
+<table bgcolor="#f4ece1">
+
+
+<tr><th><p>Sikkim, state in India,is located in the northeastern part of the country, in the eastern Himalayas. It is one of the smallest states in India. Sikkim is bordered by the Tibet Autonomous Region of China to the north and northeast, by Bhutan to the southeast, by the Indian state of West Bengal to the south, and by Nepal to the west. The capital is Gangtok, in the southeastern part of the state
+
+A part of the Eastern Himalaya, Sikkim is notable for its biodiversity, including alpine and subtropical climates, as well as being a host to Kangchenjunga, the highest peak in India and third highest on Earth. Sikkim's capital and largest city is Gangtok. Almost 35% of the state is covered by the Khangchendzonga National Park.
+
+Long a sovereign political entity, Sikkim became a protectorate of India in 1950 and an Indian state in 1975. Its small size notwithstanding, Sikkim is of great political and strategic importance for India because of its location along several international boundaries. Area 2,740 square miles (7,096 square km). Pop. (2011) 607,688.</p></th></tr>
+</th></tr>
+</table>
+
+
+<table bgcolor="#e6cdcd">
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\traditional-dress-of-sikkim.jpg" style="width:450" height="400" ></th>
+<th><h1>People and Culture</h1></th></tr>
+<tr><td rowspan="2"><p>The People of Sikkim consist of three ethnic groups, that is, Lepcha, Bhutia and Nepali. Communities of different hues intermingle freely in Sikkim to constitute a homogenous blend. Hindu Temples coexist with Buddhist Monasteries, Churches, Mosque and Gurudwara. The predominant Communities are Lepchas, Bhutias and Nepalese. These myriad Cultures has produced a quintessential Sikkimese Culture that encompasses all ways and walk of life, but has also managed to preserve their own identity. These can also be seen in the various places of Worship, Festivals and Cultural dances that are celebrated through the year
+The native Sikkimese consist of the Bhutias, who migrated from the Kham district of Tibet in the 14th century, and the Lepchas, who are believed to have migrated from the Far East. Tibetans reside mostly in the northern and eastern reaches of the state. Migrant resident communities include Bengalis, Biharis and Marwaris,who are prominent in commerce in South Sikkim and Gangtok.   
+
+Languages
+The official languages of the state are English, Nepali, Sikkimese (Bhutia) and Lepcha. Additional official languages include Gurung, Limbu, Magar, Mukhia, Newari, Rai, Sherpa and Tamang for the purpose of preservation of culture and tradition in the state.
+
+Nepali is the lingua franca of Sikkim, while Sikkimese (Bhutia) and Lepcha are spoken in certain areas. English is also spoken and understood in most of Sikkim. Other languages include Dzongkha, Groma, Hindi, Majhi, Majhwar, Thulung, Tibetan, and Yakha.
+
+The major languages spoken as per census 2001 are Nepali (62.61%), Sikkimese (Bhutia) (7.73%), Hindi (6.67%), Lepcha (6.61%), Limbu (6.34%), Sherpa (2.57%), Tamang (1.87%) and Rai (1.64%)
+
+ 
+Districts of Sikkim
+Sikkim has four districts – East Sikkim, North Sikkim, South Sikkim and West Sikkim.The district capitals are Gangtok,Mangan, Namchi and Gyalshing respectively. These four districts are further divided into 16 subdivisions; Pakyong, Rongli, Rangpo and Gangtok are the subdivisions of the East district. Soreng, Yuksom, Gyalshing and Dentam are the subdivisions of the West district. Chungthang, Dzongu, Kabi and Mangan are the subdivisions of the North district. Ravongla, Jorethang, Namchi and Yangyang are the subdivisions of the South district.
+</p></td></tr>
+
+
+</table>
+<table bgcolor="#e7c89b">
+<tr><td><center><h1>More About Sikkim</h1></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\th (2).jpeg" style="width:450" height="400" ></td></tr>
+
+
+
+<tr><td><p>Modern Sikkim is a multiethnic and multilingual Indian state. The official languages of the state are English, Nepali, Sikkimese and Lepcha.Additional official languages include Gurung, Limbu, Magar, Mukhia, Newari, Rai, Sherpa and Tamang for the purpose of preservation of culture and tradition in the state. English is taught in schools and used in government documents. The predominant religions are Hinduism and Vajrayana Buddhism. Sikkim's economy is largely dependent on agriculture and tourism. As of 2019, the state had the fifth-smallest GDP among Indian states, although it is also among the fastest-growing.
+
+Sikkim accounts for the largest share of cardamom production in India, which is the world's second largest producer of the spice after Guatemala. Sikkim achieved its ambition to convert its agriculture to fully organic between 2003 and 2016, and became the first state in India to achieve this distinction. It is also among India's most environmentally conscious states, having banned plastic water bottles "in any government functions and meetings" and polystyrene products (throughout the state).
+<br>
+<h4>Toponymy</h4><br>
+The origin theory of the name Sikkim is that it is a combination of two Limbu words: su, which means "new", and khyim, which means "palace" or "house". The Tibetan name for Sikkim is Drenjong (Wylie-transliteration: 'bras ljongs), which means "valley of rice", while the Bhutias call it Beyul Demazong, which means '"the hidden valley of rice". According to folklore, after establishing Rabdentse as his new capital, Bhutia king Tensung Namgyal built a palace and asked his Limbu Queen to name it. The Lepcha people, the original inhabitants of Sikkim, called it Nye-mae-el, meaning "paradise".[22] In historical Indian literature, Sikkim is known as Indrakil, the garden of the war god Indra.
+The Lepchas are considered to be the earliest inhabitants of Sikkim. However the Limbus and the Magars also lived in the inaccessible parts of West and South districts as early as the Lepchas perhaps lived in the East and North districts. The Buddhist saint Padmasambhava, also known as Guru Rinpoche, is said to have passed through the land in the 8th century.[26] The Guru is reported to have blessed the land, introduced Buddhism, and foretold the era of monarchy that would arrive in Sikkim centuries later.
+<br><br>
+
+
+</td></tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>According to legend, Khye Bumsa, a 14th-century prince from the Minyak House in Kham in eastern Tibet, received a divine revelation instructing him to travel south to seek his fortunes. A fifth-generation descendant of Khye Bumsa, Phuntsog Namgyal, became the founder of Sikkim's monarchy in 1642, when he was consecrated as the first Chogyal, or priest-king, of Sikkim by the three venerated lamas at Yuksom.[27] Phuntsog Namgyal was succeeded in 1670 by his son, Tensung Namgyal, who moved the capital from Yuksom to Rabdentse (near modern Pelling). In 1700, Sikkim was invaded by the Bhutanese with the help of the half-sister of the Chogyal, who had been denied the throne. The Bhutanese were driven away by the Tibetan people, who restored the throne to the Chogyal ten years later. Between 1717 and 1733, the kingdom faced many raids by the Nepalese in the west and Bhutanese in the east, culminating with the destruction of the capital Rabdentse by the Nepalese.[28] In 1791, China sent troops to support Sikkim and defend Tibet against the Gorkha Kingdom<span id="dots">...</span><span id="more"> Following the subsequent defeat of Gorkha, the Chinese Qing dynasty established control over Sikkim.[29]
+Following the beginning of British rule in neighbouring India, Sikkim allied with Britain against their common adversary, Nepal. The Nepalese attacked Sikkim, overrunning most of the region including the Terai. This prompted the British East India Company to attack Nepal, resulting in the Gurkha War of 1814.[31] Treaties signed between Sikkim and Nepal resulted in the return of the territory annexed by the Nepalese in 1817. However, ties between Sikkim and the British weakened when the latter began taxation of the Morang region. In 1849, two British physicians, Sir Joseph Dalton Hooker and Dr. Archibald Campbell, the latter being in charge of relations between the British and Sikkimese governments, ventured into the mountains of Sikkim unannounced and unauthorised.[32] The doctors were detained by the Sikkimese government, leading to a punitive British expedition against the kingdom, after which the Darjeeling district and Morang were annexed to British India in 1853. The Chogyal of Sikkim became a titular ruler under the directive of the British governor as a result of the invasion.[33]
+
+Sikkim became a British protectorate in the later decades of the 19th century, formalised by a convention signed with China in 1890.[34][35][36] Sikkim was gradually granted more sovereignty over the next three decades,[37] and became a member of the Chamber of Princes, the assembly representing the rulers of the Indian princely states, in 1922.[36]
+
+
+
+
+
+
+</span></p>
+<button onclick="myFunction()" id="myBtn">Read more</button>
+
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br><br></td></tr>
+</table>
+
+
+<center>
+<table border="0" width="50%" bgcolor="#14274e">
+
+
+<tr>
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>North East State Research</b></font><hr width="250" height="10"></td>
+
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>Menu</b></font><hr width="250" height="10"></td>
+
+
+</tr>
+
+<tr>
+<td>
+<a href="C:\1\grains.html"><font color="white">Arunachal Pradesh, Assam, Meghalaya,<br><br> Tripura,Nagaland, Mizoram, Sikkim, Manipur</a><br>
+
+
+<td>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\contactus.html"><font color="white">Contact Us</a><br><br>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html"><font color="white">About Us</a><br>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+</center>
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br>
+<hr class="rounded">
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+

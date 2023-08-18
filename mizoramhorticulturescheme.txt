@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 18px 740px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 15px 1280px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #9a7980;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fa {
+  font-size: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+  <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\education.html" class="w3-bar-item w3-button">Education</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\psus.html" class="w3-bar-item w3-button">PSUs</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\governmentagencies.html" class="w3-bar-item w3-button">Government agencies</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\fundingagencies.html" class="w3-bar-item w3-button">Funding agencies </a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\incubationcenters.html" class="w3-bar-item w3-button">Incubation centers</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html" class="w3-bar-item w3-button">Youth Opportunities</a>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html" class="w3-bar-item w3-button">About Us</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\contactus.html" class="w3-bar-item w3-button">Contact Us</a>
+</div>
+
+<div class="w3-teal"bgcolor="red" >
+  <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+  <button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+  <div class="w3-container" bgcolor="#9a7980" >
+      <h1 bgcolor="#e7c89b"><center>Dr. APJ Abdul Kalam Centre for Policy Research and Analysis, IIM
+Shillong</center></h1>
+  </div>
+</div>
+
+
+
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+  
+  
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Search</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="C:\Users\DELL\Desktop\IIM fol\tourism.html">Tourism</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handloom.html">Handloom</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html">Handicraft</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html">Horticulture</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\logistics.html">Logistics</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\education.html">Education</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html">Youth Opportunities</a>
+  </div>
+</div>
+
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="white">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+
+<table colspan="2" border="0" width="100%" height="20" bgcolor="white">
+<tr>
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\tourism.html" style="color:black;">Tourism</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handloom.html" style="color:black;">Handloom</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html" style="color:black;">Handicraft</a></th>
+
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html" style="color:black;">Horticulture</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\logistics.html" style="color:black;">Logistics</a></th>
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\tripuratourismscheme.html" style="color:black;">Scheme</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\tripuratourismpolicy.html" style="color:black;">Policy</a></th>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img src="C:\Users\DELL\Desktop\Shillong Images\tri.jpg" width="1600" height="600">
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Policies of Tripura</h2>
+<br>
+
+<p><h3>1.1.Global Tourism Scenario:</h3><br>
+A large number of people are travelling across the world- be it for work, pleasure or for
+enjoying the natural beauty or to understand the different cultures. As one of the most
+prominent human activities with positive outcomes, Tourism facilitates understanding of
+history, culture and traditions of our nation as well as of other countries. It promotes
+national integration, universal brotherhood and social integration. It offers opportunities
+for people to people exchange, generating employment opportunities, earning foreign
+exchange and this raising living standards.
+According to the annual analysis quantifying the global economic and employment
+impact of travel and tourism in 185 countries, World Travel & Tourism Council’s (WTTC)
+research reveals that the sector has grown at 3.9% during 2018. It contributed to $8.8
+trillion to the global economy and accounted for 319 million jobs, equivalent to one in
+every ten jobs.<br><br>
+<h3>1.2.Tourism Scenario in India</h3><br>
+Tourism sector is one of the largest employment generators in India and plays a very
+significant role in promoting inclusive growth of the less-advanced sections of the society.
+According to India Tourism Statistics 2019 published by Ministry of Tourism, Govt. of India,
+Foreign Tourist Arrivals in India in 2018was 10.56 million and witnessed annual growth of
+5.2%. The estimated Foreign Exchange Earnings from tourism during 2018 was Rs.1,
+94,892 Cr with annual growth rate of 9.6%1
+.Domestic tourist visits to all States and UTs in
+2018 was 1854.9 Million registering annual growth rate of 11.9%. The Indian tourism
+industry is responsible for creating 23 million direct jobs (or 5.5% of total jobs in India) and
+36.6 million direct and indirect jobs (or 8.7% of total jobs in India).<br><br>
+<h3>1.3.Tourism Scenario in Tripura:</h3><br>
+Tripura is a hilly North-Eastern State of India blessed with natural rich topography, unique
+geographical location with tropic of cancer passing through its heart. The State, an abode
+of rich floral and faunal biodiversity, unique landscapes and moderate climate throughout
+the year has immense potential for tourism .Peaceful co-existence of nineteen indigenous
+tribes along with Bengali and Manipuri communities in the State, their diverse cultural
+streams and faiths, traditional art, music and festivals, beautiful handloom and handicrafts
+constitute irresistible charm as a tourist destination. It has spellbound rock cut sculptures
+of archaeological significance, Buddhist pilgrimage sites and the royal palaces that add to
+the charm.
+During 2018-19, total 5,29,879 tourists visited Tripura including 1,12,955 foreign tourists.
+
+1
+India Tourism Statistics 2019; Ministry of Tourism, Govt. of India
+
+The bulk of foreign tourists are from Bangladesh followed by tourists from USA, Canada
+and UK. Though in small numbers, tourists from Serbia, Sweden, Hungary and New Zealand
+visited Tripura in 2018-19. Tourist arrival registered 10% annual growth during 2018-19.<br><br>
+<h3>1.4.Evolution of Tourism sector in Tripura:</h3><br>
+Tourism has been declared as an Industry in Tripura way back in1987. Realizing the
+potential of Tourism in the socio-economic development of the State, the State
+Government has set up Tripura Tourism Development Corporation Limited in 2008 for
+professional management and giving further impetus to tourism sector in the State. The
+Corporation has been registered in 2009 and since it’s functioning the revenue generation
+is continuously increasing indicating the opportunity for further expansion of this sector.
+Earlier Tourism Department was part of Information and Cultural Affairs Department but in
+2013 a separate Tourism Directorate has been set up and it acts as an administrative
+department for the Tourism Corporation.<br><br>
+<h3>1.5.People’s outlook towards tourism in the state:</h3><br>
+The sociable, art loving, ritualistic and festive character of local people is very conducive for
+tourism development in the State. People’s outlook towards tourism is positive and full of
+enthusiasm as this has potential for socio-economic development of the local communities.
+In fact, community participation in tourism development will be vital for success of tourism
+in Tripura.
+2. Need for Tourism Policy in Tripura
+Tourism continued to develop in an unorganised manner with various departments
+engaged in tourism development and facilitation but working in isolation with each other.
+Thus, a need for a joint and collaborative approach has been felt which would address
+tourism in a holistic manner through an integrated approach. There is an urgent need to
+consolidate all existing missions and plans, and together with strong participation of the
+tourism stakeholders to develop Tripura as preferred tourist destination. Considering ever
+growing and changing tourism industry, the policy shall provide guidance for bringing
+sustainability through inclusive growth, enhancing capacities of tourism stakeholders as
+well as for developing regulatory frameworks, which shall ensure quality experience for
+visitors to the State. At this stage of tourism development, the visitors’ perspectives also
+need to be factored in. Increasingly people are looking for authentic and distinctive
+experiences. Additionally, need to conserve the culture and nature has gained even more
+importance. This requires a comprehensive guiding document in the form of a policy for
+shaping Tripura’s tourism sector, which has been a long felt need in the state.
+3. Vision
+To promote sustainable tourism in Tripura, with emphasis on enhancing tourist experience,
+placing Tripura on tourism map of the world as one of the leading tourist destinations and
+also enabling economic and social development by linking tourism with the livelihood
+opportunities for local communities.
+4. Mission
+
+a. To make Tripura nationally and internationally acclaimed all-season Tourist destination.
+b. To provide world class amenities and facilities to the tourists at all destinations and also
+provide well managed public amenities on the highways.
+c. To highlight rich culture, heritage, wildlife, bio-diversity so as to provide unique experience
+of unexploited wonderland to the tourists.
+d. To disseminate Tripura’s rich history, cultural and traditional aspects related to the ancient
+kingdom.
+e. To facilitate involvement of private sector in establishment and management of tourism
+infrastructure.
+f. To encourage local communities in management of tourist destinations as well as hosting
+activities like home-stay.
+g. To generate employment opportunities for the local communities in sectors directly and
+indirectly linked with the tourism.
+5. Guiding Principles
+The tourism policy will be based on the following guiding principles:
+a. Promotion of religious tourism based by developing places of worship of all faiths.
+b. To promote eco-tourism in the State in collaboration with the Forest Department.
+c. Undertake measures to provide best experience to the tourists in terms of information,
+logistics amenities, security and hospitality.
+d. Establish active and coordinated participation of Government departments, voluntary
+organizations, the local community and other stakeholders of tourism sector.
+e. Set up an institutional mechanism to promote private investment.
+f. To create enabling framework for public-private partnerships in developing tourism
+products, projects and services.
+6. Validity period of Policy
+This policy shall remain in force for five years from the date of its issuance and projects
+started/established/ expanded operationally during such period shall qualify for
+benefits/exemption/concessions under the provision of this Policy. However, tourism
+projects established / expanded before the issuance of this policy shall be dealt with as per
+the provisions of the then prevailing policy.
+7. Strategy
+The following will be the strategy to be adopted to realise the vision of development of
+Tourism in Tripura:
+A) Tourism Infrastructure Optimization:
+The development of infrastructure is key for promoting tourism in the State. This will be
+taken up in the following ways.
+i. Destination and Basic Infrastructure Development:
+a. Destination development will be taken up through Central Govt and State Govt schemes.
+For each destination, a master plan will be developed, so that comprehensive development
+of amenities and facilities is ensured.
+
+While planning the tourism destinations, Global Sustainable Tourism Council (GSTC)
+Criteria will be adhered by the Tourism Department, which is aimed to bring all
+stakeholders together to achieve sustainable tourism. GSTC Criteria serve as the global
+baseline standards for sustainability in travel and tourism. They are the result of a
+worldwide effort to develop a common language about sustainability in tourism. They are
+arranged in four pillars listed as sustainable management, Socio economic impacts, Cultural
+impacts and Environmental impacts (including consumption of resources, reducing
+pollution and conserving biodiversity and landscapes).
+b. Department of Tourism (DoT) will collaborate with State Govt. Departments like Urban
+Development, PWD, Transport, Tripura State Electricity Corporation amongst others for
+continuous improvement and maintenance of basic infrastructure such as roads, drinking
+water, power, hygiene, transport, and solid waste management.
+c. Priority areas will include setting up of hotels, restaurants, spas and resorts, tourist centres,
+parking areas, entertainment centres, amusement parks, ropeways, golf course,
+standardized budget accommodation etc.
+d. New tourism destinations across the State will be identified and prioritized for
+development. Every year 1-2 destinations will be focused so that they can be developed in
+all respects for the tourists.
+e. Efforts to include Tourism related aspects in action plan of all departments, particularly
+Forest, Handloom and Handicrafts, Information and Cultural Affairs for promotion of fairs
+and festivals of Tripura as listed in Annexure-1,Public Works Department, Industry (for tea
+tourism), Horticulture and other Departments of the State for holistic development.
+f. Highest priority will be accorded to conservation and preservation of natural resources and
+beauty at eco-tourism destinations.
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br><br></td></tr>
+</table>
+
+
+<center>
+<table border="0" width="50%" bgcolor="#14274e">
+
+
+<tr>
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>North East State Research</b></font><hr width="250" height="10"></td>
+
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>Menu</b></font><hr width="250" height="10"></td>
+
+
+</tr>
+
+<tr>
+<td>
+<a href="C:\1\grains.html"><font color="white">Arunachal Pradesh, Assam, Meghalaya,<br><br> Tripura,Nagaland, Mizoram, Sikkim, Manipur</a><br>
+
+
+<td>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\contactus.html"><font color="white">Contact Us</a><br><br>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html"><font color="white">About Us</a><br>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+</center>
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br>
+<hr class="rounded">
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+</body>
+</html>

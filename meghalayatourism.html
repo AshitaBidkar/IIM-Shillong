@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 18px 740px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 15px 1280px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #9a7980;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fa {
+  font-size: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+  <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\education.html" class="w3-bar-item w3-button">Education</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\psus.html" class="w3-bar-item w3-button">PSUs</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\governmentagencies.html" class="w3-bar-item w3-button">Government agencies</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\fundingagencies.html" class="w3-bar-item w3-button">Funding agencies </a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\incubationcenters.html" class="w3-bar-item w3-button">Incubation centers</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html" class="w3-bar-item w3-button">Youth Opportunities</a>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html" class="w3-bar-item w3-button">About Us</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\contactus.html" class="w3-bar-item w3-button">Contact Us</a>
+</div>
+
+<div class="w3-teal"bgcolor="red" >
+  <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+  <button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+  <div class="w3-container" bgcolor="#9a7980" >
+      <h1 bgcolor="#e7c89b"><center>Dr. APJ Abdul Kalam Centre for Policy Research and Analysis, IIM
+Shillong</center></h1>
+  </div>
+</div>
+
+
+
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+  
+  
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Search</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="C:\Users\DELL\Desktop\IIM fol\tourism.html">Tourism</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handloom.html">Handloom</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html">Handicraft</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html">Horticulture</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\logistics.html">Logistics</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\education.html">Education</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html">Youth Opportunities</a>
+  </div>
+</div>
+
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="white">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+
+<table colspan="2" border="0" width="100%" height="20" bgcolor="white">
+<tr>
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\tourism.html" style="color:black;">Tourism</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handloom.html" style="color:black;">Handloom</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html" style="color:black;">Handicraft</a></th>
+
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html" style="color:black;">Horticulture</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\logistics.html" style="color:black;">Logistics</a></th>
+<th><a href="C:\Users\DELL\Desktop\IIM fol\Meghalayatourismscheme.html" style="color:black;">Scheme</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\meghalayatourismpolicy.html" style="color:black;">Policy</a></th>
+
+</tr>
+</table>
+
+
+
+
+
+<h2 style="text-align:center; background-color:#FEF2F4;" >Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\mm10.webp" style="width:100%" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\mm2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\mm3.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\mm4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\mm5.webp" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\mm9.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\mm10.webp" style="width:100%" onclick="currentSlide(1)" alt="Best Places">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\mm2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Beauty of Meghalaya">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\mm3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Lakes">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\mm4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\mm5.webp" style="width:100%" onclick="currentSlide(5)" alt="A Beautiful Day">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\mm9.jpg" style="width:100%" onclick="currentSlide(6)" alt="Mountais">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
+
+
+
+
+
+<marquee  bgcolor="EAE3D2" scrollamount="10" behavior="alternate" direction="left" width="1500" height="50" <center>
+<center><font face="cooper black" color="black" size="6" alignment="centre">Meghalaya</font>
+
+</marquee>
+
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\mmt1.webp"></th>
+<th><h1>Cherrapunji</h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>	Cherrapunji is regarded as one of the wettest places on earth as the highest rainfall is foreseen during the year. Tourists from around the world come here to see the Dain-Thlen, Kynrem, and Nohkalikai waterfalls that are known as the popular waterfalls of Cherrapunji. The town encompasses some of the best waterfalls in Meghalaya.
+
+Major attractions here are Living-Root bridges, Mawsmai cave, Seven sisters falls, Eco-park and a garden of caves. As it is situated in a forest, it does not have the option of luxury stay rather you will get resorts in Meghalaya and some hotels in the lap of nature which will be a great fit to stay with family and friends.
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1>Balpakram National Park</h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\mmt2.webp"></td></tr>
+
+
+
+<tr><td><p>If you are in Meghalaya you should visit Balpakram National park, it is considered as the traveller’s paradise. This place is referred to as the ‘Land of Spirits’ by many tourists that come here to explore the rich biodiversity of Balpakram National park.
+
+A paradise for all the wildlife enthusiasts or wildlife photographers as you can spot animals like Red Panda, Wild Buffalo, Elephant, Tiger, Deer, Leopards, Wild Cows, Marbled Cat, etc. Some rare species include Lesser Panda, Indian Bison, and Sterow.
+
+One of the best places to see in Meghalaya, tourists often compare this pace to the Grand Canyon in the USA. It is one of the best national parks in Meghalaya and you can easily find budget-friendly accommodations here.
+
+</p></td></tr>
+
+
+
+</table>
+
+
+
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\mmt3.webp"></th>
+<th><h1>Elephant Falls </h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>	The evergreen Meghalaya which has dense forests spread out everywhere around the state is also known for the amazing waterfalls. Elephant Falls, the beauty of Meghalaya, has the elephant-like stone at its foot. One of the most popular falls in the North-East, visting here in one ofthe best things to do in Meghalaya.
+
+The majestic Elephant falls were alluded to as ‘Ka Kshaid Lai Patang Khohsiew’ by the nearby Khasi individuals, which signifies ‘The Three Step Waterfalls’, as these falls comprise of three wonderful falls in progression. The first of the three waterfalls are tucked between the thick trees and are wide.
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1>Double-decker Living Root Bridge</h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\mmt4.webp"></td></tr>
+
+
+
+<tr><td><p>Situated in Cherrapunji, Meghalaya, a double-decker living root bridge is famous for its bridge made up of roots of an Indian rubber tree. The bridge is 3 km long at a height of 2400 feet. The most scenic experience is when the Umshiang river flows beneath the bridge and you are walking over it. It is the oldest natural bridge made around 200 years ago but only 50 people can be accommodated at one time. You have got to visit this place on your Meghalaya honeymoon.
+
+The bridge begins at the town of Tyrna and crosses the Umshiang waterway during its adventure. Getting to the exact location is somewhat of a trek. The climb down to the bridge is an incredible 3500-3600 stages every route to the scaffold and once more from the base town of Tyrna, which is 20 kilometers from the principal town of Cherrapunjee. It is one of the top places to visit in Meghalaya.
+
+</p></td></tr>
+
+
+
+</table>
+
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\mmt5.webp"></th>
+<th><h1>Kyllang Rock</h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>	Somewhere in the range of 78 km away from Shillong, an extraordinary giant rock made out of red stone, Kyllang Rock is situated in the West Khasi Hills of Meghalaya. The Rock which is 5400 ft above sea level and has a width of around 1000 ft is a mammoth square of granite stone which is a piece of the Khasi fables and appears to be lovely in its shape.
+
+A climb to the highest point of Kyllang Rock enables you to cherish the magnificent scene of the encompassing zone. Encompassed by age-old Red Rhododendrons, Kyllang Rock is said to have an uncommon attractive field. The mammoth dome is blocked off from its southern side but through the northern side, it is brimming with rhododendrons and shrubs.
+
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1>Mawlynnong Village </h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\mmt6.webp"></td></tr>
+
+
+
+<tr><td><p>The cleanest village in Asia? Yes, the Mawlynnong village. It is one of the most exotic locations in Meghalaya to go through the day. From beautiful waterfalls and root bridges to a clean environment and the scenic view, this town invites you with everything that is basic to make your Meghalaya excursion pivotal. Apart from this, there are numerous bamboo houses where you’ll need to have a stay to adapt more with the location.
+
+</p></td></tr>
+
+
+
+</table>
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\mmt7.webp"></th>
+<th><h1>Baghmara</h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>	Every wildlife enthusiast should visit this spot that is only 4km from the town of Baghmara, the Baghmara Reserve Forest that is possessed with elephants, feathered creatures and langurs. For the labyrinth lovers, there are the Siju caverns, the third-longest cavern framework in the Indian subcontinent comprising of endless mazes and chambers.
+
+The wonderful limestone rock arrangement inside the caverns, named as the ‘Princess Di’s Chamber’ is especially sensational. Like this wasn’t sufficient, the Siju Bird Sanctuary offers to keep the winged creature fans snared with the rarest of species relocating here during the winters.
+
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1>Nohkalikai Waterfalls </h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\mmt8.webp"></td></tr>
+
+
+
+<tr><td><p>The 4th most noteworthy waterfalls on the planet, Nohkalikai falls fall somewhere in the range of 335 meters from a verdant cliff to the ground giving the depiction of gigantic and extraordinary heavenliness. The pride of the territory of Meghalaya, the falls are one of the most wonderful and terrific falls in the nation.
+
+Taken care of between the evergreen rainforest of the Khasi Hill and streaming with all its glory and may, the falls dive into a tidal pond which is as blue as the evening sky. This fall is one of the best places to visit in Meghalaya.
+
+</p></td></tr>
+
+
+
+</table>
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\mmt9.webp"></th>
+<th><h1>Mawsmai Cave</h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>	Among all the caves in the region, Mawsmai Cave is delightful without a doubt. There is a lot of vegetation inside the cavern to grab one’s eye. The length of the cave is only 150 meters which isn’t the longest in contrast to different caves in the region yet it most likely gives you glimpse into life in the underground. Found only 6 km away from the core of Cherrapunjee, Mawsmai cave is an amazing cave in the East Khasi Hills of Meghalaya.
+
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1>Umiam Lake </h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\mmt10.webp"></td></tr>
+
+
+
+<tr><td><p>Umiam Lake, a beautiful man-made reservoir is situated at 15 kilometers north of Shillong. The lake was shaped after a dam was developed to produce hydroelectric power. The picturesque Umiam Lake is enclosed by lavish green East Khasi slopes that makes for an encompassing sights for nature lovers. The dawn at the lake is a treat to witness with naked eyes and shouldn’t be missed. Tourists can take a long boat ride in the lake, and adventure junkies can appreciate drifting and different water-sports.
+
+</p></td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br><br></td></tr>
+</table>
+
+
+<center>
+<table border="0" width="50%" bgcolor="#14274e">
+
+
+<tr>
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>North East State Research</b></font><hr width="250" height="10"></td>
+
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>Menu</b></font><hr width="250" height="10"></td>
+
+
+</tr>
+
+<tr>
+<td>
+<a href="C:\1\grains.html"><font color="white">Arunachal Pradesh, Assam, Meghalaya,<br><br> Tripura,Nagaland, Mizoram, Sikkim, Manipur</a><br>
+
+
+<td>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\contactus.html"><font color="white">Contact Us</a><br><br>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html"><font color="white">About Us</a><br>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+</center>
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br>
+<hr class="rounded">
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+</body>
+</html>

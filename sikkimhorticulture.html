@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 18px 740px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 15px 1280px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #9a7980;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fa {
+  font-size: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+  <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\education.html" class="w3-bar-item w3-button">Education</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\psus.html" class="w3-bar-item w3-button">PSUs</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\governmentagencies.html" class="w3-bar-item w3-button">Government agencies</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\fundingagencies.html" class="w3-bar-item w3-button">Funding agencies </a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\incubationcenters.html" class="w3-bar-item w3-button">Incubation centers</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html" class="w3-bar-item w3-button">Youth Opportunities</a>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html" class="w3-bar-item w3-button">About Us</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\contactus.html" class="w3-bar-item w3-button">Contact Us</a>
+</div>
+
+<div class="w3-teal"bgcolor="red" >
+  <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+  <button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+  <div class="w3-container" bgcolor="#9a7980" >
+      <h1 bgcolor="#e7c89b"><center>Dr. APJ Abdul Kalam Centre for Policy Research and Analysis, IIM
+Shillong</center></h1>
+  </div>
+</div>
+
+
+
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+  
+  
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Search</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="C:\Users\DELL\Desktop\IIM fol\tourism.html">Tourism</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handloom.html">Handloom</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html">Handicraft</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html">Horticulture</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\logistics.html">Logistics</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\education.html">Education</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html">Youth Opportunities</a>
+  </div>
+</div>
+
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="white">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+
+<table colspan="2" border="0" width="100%" height="20" bgcolor="white">
+<tr>
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\tourism.html" style="color:black;">Tourism</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handloom.html" style="color:black;">Handloom</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html" style="color:black;">Handicraft</a></th>
+
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html" style="color:black;">Horticulture</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\logistics.html" style="color:black;">Logistics</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\sikkimhorticulturescheme.html" style="color:black;">Scheme</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\sikkimhorticulturepolicy.html" style="color:black;">Policy</a></th>
+
+
+</tr>
+</table>
+
+
+
+
+
+
+
+<h2 style="text-align:center; background-color:#FEF2F4;" >Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\SHHH9.jpg" style="width:100%" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\SHHH13.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\SHHH4.jpeg" style="width:100%">
+  </div>
+<div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\SHHH14.jpg" style="width:100%" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\SHHH11.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="C:\Users\DELL\Desktop\Shillong Images\SHHH12.jpeg" style="width:100%">
+  </div>
+    
+  
+
+  
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\SHHH9.jpg" style="width:100%" onclick="currentSlide(1)" alt="Horticulture">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\SHHH13.jpg" style="width:100%" onclick="currentSlide(2)" alt="Horticulture">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\SHHH4.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Horticulture">
+    </div>
+<div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\SHHH14.jpg" style="width:100%" onclick="currentSlide(4)" alt="Horticulture">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\SHHH11.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Horticulture">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\DELL\Desktop\Shillong Images\SHHH12.jpeg" style="width:100%" onclick="currentSlide(6)" alt="Horticulture">
+    </div>
+   
+    
+  </div>
+</div>
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
+
+
+
+
+
+<marquee  bgcolor="EAE3D2" scrollamount="10" behavior="alternate" direction="left" width="1500" height="50" <center>
+<center><font face="cooper black" color="black" size="6" alignment="centre">Sikkim</font>
+
+</marquee>
+
+
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\SHHH15.jpeg"></th>
+<th><h1>CEREALS:- Rice, Maize</h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>	Rice is one among the oldest cultivated crop as evident from Vedic literatures and Archeological excavation. It is being cultivated in India and China since thousands of years. About 90 % of world’s area under rice is in Asia and about 90 % of world’s rice is produced and consumed in Asia. Globally rice is grown in more than 150m ha area. India and Chine together hold about half the world’s rice area and more than 60 % people are rice eaters. Rice is the main staple food and the first cultivated crop in Asia long before the era of which we have the historical evidences (Parthasarathi, 1960 and Ghosh et al., 1960). No one really knows exactly where first seeds of rice originated.
+
+Cultivation of rice in Tropical Asia probably began about 10,000 years ago (De Datta, 1981). In India, oldest specimen of rice was found in Hasthinapur (UP) in a carbonized form during excavation (1000-750 BC). India may have had the earliest date of cultivation as wild rice is found in abundant. Domestication process first took place in China and later transmitted to South East Asia. It is also believed that wild rice first cultivated in Bangladesh, Assam, Orissa or its surrounding areas. It is also cultivated in most countries of west and North Africa (Egypt), east and central Africa. Its cultivation further extended to south and Central American countries (Latin America), Australia, USA and Southern European countries like Spain, Italy, and France.
+
+Rice is one among the staple food crop in Sikkim as inferred from the epithet “Denzong”-meaning “Valley of Rice”. Its antiquity is Sikkim is difficult to trace out but some experts consider the entire NE Region including Sikkim and adjoining area of China shall be the probable home of rice. A large number of landraces are cultivated in Sikkim in addition to introduced since 1970s.
+Rice is one of the most important cereal crops of Sikkim grown in all places having warm and humid climate with shallow water. It is cultivated over an area of about 14.15 thousand hectare. The production of rice was 22.69 thousand tones in 2005- 06 and 21.45 thousand tones in 2006-07. This yield could be increased by and effective implementation of special food grain production programme (SFPP) and special rice development programme (SRPP).
+<br><br>
+Maize is ranked second to wheat among the world cereal crops (FAO 1986). Some 70 countries produce maize 1,00,000 hectares or more, 53 from the developing nations. Developed market economies account for 30% of the global maize area, but provide 50% of the total production as their average yields is three times higher than the world average. Developing nations accounted for 60% of the world total maize area, but produce only 40% of the global harvest (Timothy et al., 1988). In 1996, the total area under maize production was 141,116,000 ha with a total yield of 590,091,000 metric tons of which 266,214,000 tons were harvested for grain.
+
+The distribution over the continents reflects the relative importance attached to maize in the different regions. North America with 41,064,000 ha produced over 50% of the world’s production in 1998. It had a mean yield of 6.48 tons/ha. South America had 19,612,000 ha under maize (2.88 tons/ha), Europe had 13,251,000 ha (4.783 tons/ha), Africa 24,879,000 ha (1.63 tons/ha), Asia 42,203,000 ha (3.82 tons/ha) and Oceania with 83,000 ha (6.22 tons/ha) (USDA 1998). According to the USDA-ARS, the 9 billion bushels per year of maize produced in the US are valued at 30 billion dollars. Maize is also the chief export crop of the US. The maize exported exceeds all the maize used domestically for food, seed, and industrial purposes. Over half of maize used domestically is used as livestock feed (USDA, 1999).
+
+Sixty four percent of the maize produced in the world and 72% in the developed markets is used as animal feed. Less developed countries use 48% of their grain maize for animal feed and Eastern Europe and former USSR use 79% of their maize for animal feed. Maize used directly for human consumption accounts for only 21% of the world maize production. Developed markets, less developed countries and Eastern Europe and former USSR use 14, 40and 4% of the maize produced directly as human food (CIMMYT 1993/94).
+
+United States is the largest producer of maize in the world. In 1997, US planted 80,227,000 acres to maize. Of those, 78,720,000 acres were harvested for grain while the remaining 5,758,000 acres were used for silage. The leading state with highest acreage of maize was Iowa (12 million acres) and the lowest was Montana with 14,000 acres. The average national production was 127 bushels/acre. The production varied a lot across states with some states producing as much as 195 bushels/acre (Oregon) and as low as 123 bushels/acre (Indiana) (Corn refiners association 1998).
+
+
+
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1>FRUITS:- Mandarin, Banana, Papaya, Guava</h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\SHHH16.jpeg"></td></tr>
+
+
+
+<tr><td><p>Mandarin orange is the most common among citrus fruits grown in India. It occupies nearly 50% of the total citrus area in India. Mandarin group includes all types of loose jacket oranges commonly called Santra or mandarin such as Nagpur Santra, Coorg Santra, the Khasi Mandarin, Sikkim Mandarin etc. Sikkim Mandarin represents the most important commercial fruit of Sikkim. Sikkim Mandarin is similar to the Nepal or Assam or Darjeeling Mandarin. Citrus reticulate is a highly polyembryonic species, having medium sized upright trees. Besides world wide demand of Mandarin Oranges as fresh fruits, these can be used for the preparation of a number of processed products like orange marmalade, bottled and canned juices, squash, jam, jelly etc. Orange oil is also important citrus oil used for flavouring purposes.
+The origin of citrus reticulate is China. Though, it is grown in many states of India, certain belts/pockets have emerged as the leading producers. The valleys of Tista and Rangeet rivers and their tributaries of Sikkim and adjoining Darjeeling district of West Bengal offer an ideal Himalayan climate for the cultivation of Sikkim Mandarin. Other Mandarin oranges are grown in the regions of Coorg (Karnataka) the Wynad tracts of Malabar (Kerala), Nilgiris, Shevroy Hills and Yerc and Hills (Tamil Nadu). Khasi Mandarin is extensively grown in Khasi, Jaintia and Lushia Hills and the districts of Cachar, Kamrup, Goalpara, Darrange and Sibsagar. The famous Nagpur Santra is grown around Nagpur region of Central India. In Punjab, mandarin cultivation is confined to the sub-mountain districts of gurdaspur, Hosiarpur and Kangra. In Uttarakhand, the main Santra growing areas are sub-mountain tracts of Garhwal in the kumaon hills. Mandarins are also grown around Saharanpur, Banaras, Mirzapur districts and humid plains of Bengal and Bihar having varying altitudes and rainfall.
+
+In Sikkim, mandarin is cultivated in an area of about 6,300 hectares, with a total average annual production of about 17,190 tonnes. The important orange producing areas are the Tista and Rangeet river valleys within the elevation range of 600 to 1500 m above mean sea level. Tashiding, Gyalshing, Omchung, Tijyah, Lingchom, Bermiok, Barthang, Rinchenpong, Chinthang, Chakung, Zoom, Timberbong, Karthok in the West; Kewzing, Lingmoo, Sangmoo, Yangang, Payong, Rateypani, Namthang, Tarku, Tokal- Bermiok, Turuk, Sumbuk in the South; Nazitam, Sang, Simiklingy, Khamdong, Sirwani, Samdong in the East and Dikchu and Hee-Gyathang in the North district of Sikkim are the important orange growing areas of Sikkim.
+<br><br>
+Banana is one of the oldest tropical fruits cultivated by man from prehistoric time in India with great socio-economic significance, interwoven in the cultural heritage of the country. It is also fourth important food crop in terms of gross value after paddy, wheat and milk products and forms an important crop for subsistence farmers. It is also desert fruit for millions apart from a staple food owing to its rich and easily digestible carbohydrates with a calorific value of 67 to 137/100 gm fruit. It is the most important fruits of India.
+
+Bananas and plantains have apparent ambiguity of using the words. Usually banana is used as desert fruit. Plantains are generally much starchier and generally used for culinary purpose. Plantain and cooking bananas are staple food of people of many countries of Central and West Africa, the Carribean Islands and Latin America.
+
+In Sikkim it is fourth most important fruit and cultivated (hill banana) throughout the state in the kitchen garden, boundaries of field and farms etc. since 1976 onwards the cultivation of banana in orchard was started with introduction of high yielding variety such as Dwarf Cavendish from Bihar, Bengal and other states of India. The important banana growing states of India are Tamil Nadu, Karnataka, Madhya Pradesh, Kerala, Assam, UP, Maharashtra, West Bengal, Himachal Pradesh, Bihar, Gujarat etc. It is a rich source of Vitamin C and minerals, and makes healthy and salt-free diet. In India, banana contributes 31.72% of the total fruit production. India is the largest producer of banana in the world.
+<br><br>
+Papaya also called papaw or pawpaw, is a quick growing typically single-stemmed, short lived, large, perennial herb, branching may occur with age or if the apical growing point is damaged and can bear fruits for more than 20 years. It is one of the most popular and a commercial fruit of India. It was introduced in India via Malacca in the 16th Century.
+
+It is grown in tropical and sub-tropical regions of the world. It is mainly grown in India, Australia, Hawaii, Sri Lanka, Malya, Florida, Texas, California, South Africa and Kenya. In India it is grown extensively in the states including Andhra Pradesh, Tamil Nadu, Assam, Bihar, Maharashtra, UP, Gujarat, Punjab, West Bengal, MP, Karnataka and other parts.
+
+In Sikkim, its importance as a fruit crop has recently been realized and being grown in the foot hills of the state below 900 metres elevation. The State Department of Agriculture produces seedlings at Namli garden and Majitar farm in East District and Kaijeley farm in West and distribute to the farmers every year in large scale for the rapid development and growth, of this fruit crop. Although Sikkim receives very high rainfall, which has discouraged the development of this fruit crop, yet there are some pockets in the states such as south district, lower elevation of West Districts, and East district with lesser rainfall wherein papaya can be successfully cultivated as a commercial fruit crop. It is a highly paying fruit crop with a very high yield potential.
+
+<br><br>
+Guava, the apple of the tropics, is a popular fruit of India. It is available throughout the year except during summer months. It claims to be the fourth most important fruit in area and production after mango, banana and citrus. It is now widely grown all over the tropics and sub-tropics. It has been in cultivation in India since early 17th century and gradually became a crop of commercial importance. It is widely grown in India viz., Uttar Pradesh, Bihar, Madhya Pradesh, Maharashtra, Andhra Pradesh, Tamil Nadu, West Bengal, Assam, Orissa, Karnataka, Kerala, Rajasthan and many more states. Uttar Pradesh is one of the most important states of India where about half of the total area is under guava cultivation, and district Allahabad has the reputation of growing the best quality guava in the country as well as in the world. Guava is quite hardy, prolific bearer and highly remunerative even without much care.
+
+In Sikkim, it is the third important fruit crop. Till 1976, it was cultivated in a limited area as in Kitchen garden or as border tree etc. It is now cultivated in the form of orchards below 1200 metres elevation in the hills of the states.
+
+</p></td></tr>
+
+
+
+</table>
+
+
+
+
+
+<table>
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\SHHH17.jpg"></th>
+<th><h1>SPICES:- chilli, Large Cardamom, Turmeric, Ginger</h1><hr color="blue" width="150"></th></tr>
+<tr><td rowspan="2"><p>Chili is an important cash crop in India and is grown for its pungent fruits, which are used both green and ripe (the latter in the dried form) to impart pungency to the food. Green chillies are rich in Vitamin A and C, minerals and protein. Dry chillies are also rich in Vitamin A and D. As a condiment, it has become indispensable in every Indian home. It is also used medicinally, sauces, chutneys and pickles. Nadkarni (1927) has reported many medicinal value of chilli. Its paste is externally used as rubefacient and as local stimulant for the tonsils in tonsillitis. It is irritant internally and produces gastroenteritis. It is used with many ingredients for local remedies. In West Indies it is used to relieve the sinking at the epigastrium felt by drunkards. The pungency is due to the oleoresin ‘capsicin’ (a volatile alkaloid and its acridity is due to capsicin) contained in the skin and the septa of the fruit. Chilli was known to Indians about 400 years ago, when this crop was first introduced into India by Portuguese, towards the end of the 15th century. Its cultivation became popular in the 17th century. It is now grown in all parts of India covering about 7,33,800 hectares. Chilli is valued for its diverse commercial uses. Only a few perennial chilli varieties characterized by small-sized pods upright fruiting and high pungency are rarely cultivated commercially belong to C. frutescens.
+
+The largest producer of chillies in the world is India accounting for 11 lakh tons of production annually followed by China with a production of around 4 lakh tons. Mexico and Pakistan produces 3 lakhs tonnes each of chili every year. India also leads in the context of maximum area covered under chilli cultivation. In Sikkim, cherry pepper also known as dale khorsani is the most favorite chili grown in almost every kitchen garden.
+
+Capsicum (chillies) constitutes the most important spice grown all over the world except in colder parts. There are many varieties differing in habit, size, shape, color and pungency of fruit. Among these paprika’s with mild pungency cultivated mainly in European countries, viz. Hungary, Spain, Bulgaria, Rumania and Poland. Chilies with higher pungency grown in tropical countries , viz. India, China, Pakistan, Nigeria, Malaysia, Japan and Turkey are Important. Total world chilli production in green form is 7 to 8 million tones (2 to 3 million tones in dry form).
+
+<br><br>
+Large Cardamom (Amomum Subulatum Roxb), A member of the family, Zingiberaceae under the order Scitaminae is the main cash crop cultivated in the sub Himalayan state of Sikkim and Darjeeling district of West Bengal. It is also cultivated in part of Uttara khand and in some other North Eastern Hill States Nepal and Bhutan are the other two Himalayan countries where large cardamom is cultivated. Sikkim is the large producer of large cardamom and constitute lion share of Indian and world market.
+
+The large cardamom plant is a perennial herfewith subterranean rhizomes with leafy shoots. Stem is a pseudostem which is called tiller. Inflorescence is spike. Generally, 30 to 40 flowers are observed in a spike. Flowers are yellow, bisexual, Zygomorphic & Pollinated by bumble bees. There are three petals with a labellum which is mainly for attracting insects for pollination. Stamens possess filament and anther. Anthesis occurs in the morning hours. Ovary inferior with ovules in axile placentation, stigma funnel shaped, fruit is capsule, achinated, maroon in colour with white seeds which are in immature stage and dark brown to black in mature stage.
+<br><br>
+The goddess of turmeric brings color in life,
+It is the ornament of married woman and any woman
+Who puts turmeric in her purse,
+Her purse will never be empty.
+
+An old Indian folk song praises turmeric, the golden spice from the East, for its power to bring beauty, good health and good luck to those who use and carry it.
+
+Turmeric, a rhizomatous crop grows to about 1 m tall and bears white to pale yellow flower spikes. The yellow tubers are the source of the pungent spice. It is an erect, perennial herb grown as an annual crop. India, Bangladesh, Taiwan and China are major turmeric producing countries. India is one of the leading growers, with about 79,300 ha under this crop, producing 1,43,900 tonnes per annum. It is cultivated in Andhra Pradesh, Orissa, West Bengal, Tamil Nadu, Karnataka and Kerala.
+
+There are two types of turmeric produced in central India. One has solid and dark color and the other long, soft and light color. ‘Kum-Kum’, popular with every house wife, is also a by-product of turmeric. It finds a place in offerings on religious and ceremonial occasions. A type of starch can also be extracted from a particular type of turmeric.
+
+The dried rhizome of a herbaceous plant, turmeric is closely related to ginger. The spice is also sometimes called 'Indian saffron' thanks to its brilliant yellow color. Indian turmeric has been known to the world since ancient times. Several unique properties of Indian turmeric make it the ideal choice as a food flavor, an effective ingredient in medicines and cosmetics, and as a natural colorant. With its rich curcumin content, which imparts the distinctive yellow color, and other inherent qualities, Indian turmeric is considered the best in the world. India is today the largest exporter of turmeric to discerning countries like the Middle East, the UK, USA and Japan. Some of the well-accepted varieties are: 'Alleppey Finger' and 'Erode turmeric' (from Tamil Nadu), 'Rajapore' and 'Sangli turmeric' (from Maharashtra) and 'Nizamabad Bulb' (from Andhra Pradesh). India also exports turmeric in powder form and as oleoresin.
+<br><br>
+Ginger (Zingiber officinale Rose) locally known as "Adua" is an important spice/cash crop grown in Sikkim since time immemorial. It is commonly used for religious purpose by Limbo Phedangmas and Rai Bijuwas which show its attachment with the people of Sikkim since ancient time. The crop is a good source of income for small and marginal farmers and is grown up to an elevation of 1500 m above msl, occupying an area about 8000ha producing 44,000 tons of ginger.
+
+The main ginger producing areas in the state are Mangalbaria belt, Chakung, Chumbung, Zoom, Tharpu, Malbansey, Gyalshing in the West District; Turuk, Salghari, Sumbuk, Ratepani, Namthang, Mellidara, Maniram, Namchi, Tarku, Bermiok, Dong in the South District; Rhenock, Rongli, Rorathang, Pakyong, Pachekhani, Pandam, Khamdong, Sirwani, Sang, Nazitam in the East District; and in small pockets of Dzongu and Mangan area of North District.
+</p></td></tr>
+
+
+</table>
+<table>
+<tr><td><center><h1>VEGETABLES:- Tomato, Broccoli, Iskus, Cauliflower</h1><hr color="blue" width="135"></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\SHHH18.jpg"></td></tr>
+
+
+
+<tr><td><p>Tomato is one of the most important – “protective foods” because of its special nutritive value and widespread production. It is the world’s third largest vegetable crop after potato and sweet potato, but it tops the list of capped vegetables. Tomatoes are used for soup, salad, pickles, ketchup, puree, sauces etc. It was introduced in India by the Portuguese. It is now the most important and remunerative vegetable in India. Uttar Pradesh, Maharashtra, Karnataka, Bihar, Orissa are the major tomato growing states. Because of suitable agro climatic conditions of Sikkim, tomato can be grown throughout year.
+<br><br>
+The name ‘broccoli’ refers to the young shoots which develop in spring on same species of the genus Brassica (‘brocco’ is Italian for a shoot). In Italy, these have been used as vegetable from early times but their economic importance become appreciable only since the thirties of the century when this vegetable became popular in the U.S.A.
+
+Sprouting broccoli is sometimes briefly called broccoli, through this name is also used for broccoli rape and for winter cauliflower (winter broccoli or heading broccoli). In India, its cultivation is negligible and limited to kitchen garden but now it is becoming increasingly popular in hotels in Mumbai, Kolkata, Delhi and Chennai. It is mostly cultivated in the hilly region of Himachal Pradesh, Uttar Pradesh, Jammu and Kashmir, Nilgiri hills and northern plains of India. Sikkim has the suitable weather for its cultivation and, therefore, there is a tremendous scope for its cultivation and supply of broccoli to different parts of the country and even export too.
+
+Morphologically, sprouting broccoli resembles cauliflower. The plant forms a kind of head, consisting of green buds and thick fleshy flower stalks. The terminal head is rather loose, green in color and the flower stalks are larger than cauliflower. The sprouts in the axils of leaves develop strongly, especially after the removal of the terminal head. Both terminal and sprouts with bud clusters are consumed as human food.
+
+<br><br>
+Chayote (Sechium edule) is a member of the family Cucurbitaceous vegetable. The name chayote is derived from the vine’s Indian name, Chacha. It is a popular vegetable in N-E hilly region commonly called squash and grows abundantly without much care and attention in high hills of Meghalaya, Manipur, Mizoram, Nagaland and Sikkim. Chayote is a perennial rooted cucurbit, with climbing vines and leaves resembling those of the cucumber. Its vine can grow as high as 12 meters. Its leaves are heart-shape, 10-25 cm wide and with tendrils on the stem. The flowers are cream-colored or somewhat green that comes out beneath a leaf or branch. It is a monoecious plant but male and female flowers borne in separate places. If the vine is male, the flowers are in cluster; if female, the flowers are slitary. The light green, pear shaped fruit, with deep ridges lengthwise, may weigh as much as one kilogram, but most often is from 170-340 grams. The chayote fruit differs from its multi-seeded relatives, in that it contains only a single, flat edible seed. Fruits may be slightly grooved, and its skin may be prickly or smooth.
+<br><br>
+Cauliflower was introduced in India in 1822 (Swarup and Chatterjee, 1972). The initial introduction was the Cornish types Bram England and later the other European types also were introduced. The typical Indian cauliflowers were the result of intercrossing between the Cornish and other European types. Thus a new development took place in India resulting in tropical cauliflower resistant to hot weather and high rainfall. These types are normally grown in Indian plains from May-June to January which is followed by the only temperate cauliflower known as snowball. All these cauliflowers grown in India are annual, both Indian and snowballs. Among the winter vegetables in India, cauliflower is possibly the most popular. It is an important vegetable crops of the Sikkim and is widely cultivated for its white tender head (curd). It is a nutritious vegetable and contains a good amount of Vitamin B and a fair amount of protein, minerals and vitamins A and C.
+
+
+
+</p></td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br><br></td></tr>
+</table>
+
+
+<center>
+<table border="0" width="50%" bgcolor="#14274e">
+
+
+<tr>
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>North East State Research</b></font><hr width="250" height="10"></td>
+
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>Menu</b></font><hr width="250" height="10"></td>
+
+
+</tr>
+
+<tr>
+<td>
+<a href="C:\1\grains.html"><font color="white">Arunachal Pradesh, Assam, Meghalaya,<br><br> Tripura,Nagaland, Mizoram, Sikkim, Manipur</a><br>
+
+
+<td>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\contactus.html"><font color="white">Contact Us</a><br><br>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html"><font color="white">About Us</a><br>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+</center>
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br>
+<hr class="rounded">
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+</body>
+</html>

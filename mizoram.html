@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#more {display: none;}
+</style>
+
+
+
+
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 18px 740px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 15px 1280px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #9a7980;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fa {
+  font-size: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+  <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\education.html" class="w3-bar-item w3-button">Education</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\psus.html" class="w3-bar-item w3-button">PSUs</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\governmentagencies.html" class="w3-bar-item w3-button">Government agencies</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\fundingagencies.html" class="w3-bar-item w3-button">Funding agencies </a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\incubationcenters.html" class="w3-bar-item w3-button">Incubation centers</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html" class="w3-bar-item w3-button">Youth Opportunities</a>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="C:\Users\DELL\Desktop\IIM fol\home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html" class="w3-bar-item w3-button">About Us</a>
+  <a href="C:\Users\DELL\Desktop\IIM fol\contactus.html" class="w3-bar-item w3-button">Contact Us</a>
+</div>
+
+<div class="w3-teal"bgcolor="red" >
+  <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+  <button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+  <div class="w3-container" bgcolor="#9a7980" >
+      <h1 bgcolor="#e7c89b"><center>Dr. APJ Abdul Kalam Centre for Policy Research and Analysis, IIM
+Shillong</center></h1>
+  </div>
+</div>
+
+
+
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+  
+  
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Search</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="C:\Users\DELL\Desktop\IIM fol\tourism.html">Tourism</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handloom.html">Handloom</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html">Handicraft</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html">Horticulture</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\logistics.html">Logistics</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\education.html">Education</a>
+    <a href="C:\Users\DELL\Desktop\IIM fol\youthopportunities.html">Youth Opportunities</a>
+  </div>
+</div>
+
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="white">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+
+<table colspan="2" border="0" width="100%" height="20" bgcolor="white">
+<tr>
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\tourism.html" style="color:black;">Tourism</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handloom.html" style="color:black;">Handloom</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\handicraft.html" style="color:black;">Handicraft</a></th>
+
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\horticulture.html" style="color:black;">Horticulture</a></th>
+
+
+<th><a href="C:\Users\DELL\Desktop\IIM fol\logistics.html" style="color:black;">Logistics</a></th>
+
+</tr>
+</table>
+
+
+<table border="0" width="100%" bgcolor="white">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+<img src="C:\Users\DELL\Desktop\Shillong Images\mizoram2.jpeg" width="1600" height="600">
+
+
+
+
+
+
+<table bgcolor="#f4ece1">
+
+
+<tr><th><p>Mizoram, state of India. It is located in the northeastern part of the country and is bounded by Myanmar (Burma) to the east and south and Bangladesh to the west and by the states of Tripura to the northwest, Assam to the north, and Manipur to the northeast. The capital is Aizawl, in the north-central part of the state.
+
+Mizoram (“Land of the Mizos”) was known as the Lushai Hills District of Assam before it was renamed the Mizo Hills District in 1954. In 1972 it became a centrally administered union territory under the name of Mizoram, and in 1987 it achieved statehood. Area 8,139 square miles (21,081 square km). Pop. (2011) 1,091,014.</p></th></tr>
+</th></tr>
+</table>
+
+
+<table bgcolor="#e6cdcd">
+<tr><th rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\mizorampeople.jpg" style="width:450" height="400" ></th>
+<th><h1>People and Culture</h1></th></tr>
+<tr><td rowspan="2"><p>The residents of Mizoram consist almost entirely of Scheduled Tribes (an official category embracing indigenous groups that fall outside the predominant Indian social hierarchy). These groups are loosely called Mizo, a local term meaning “highlanders.” Among the most prominent of the Mizo peoples are the Kuki, Pawi, and Lakher. Most of the Mizo are Tibeto-Burman peoples, speaking Mizo or a closely related Tibeto-Burman language or dialect. One group in the state, however, the Chakma, speaks an Indo-Aryan language. Mizo and English are the principal and official languages. Having no script of its own, Mizo uses the Roman alphabet.
+Christian missionaries began to work in the Mizo Hills area in the late 19th century. Consequently, the great majority of the population is Christian—predominantly Protestant—with most conversions having occurred in the 1920s and ’30s. Buddhists form the largest religious minority in Mizoram, followed by Hindus and Muslims; there also are tiny groups of Sikhs and Jains.
+
+Music and dance are important elements in Mizo cultural life, with many festivities associated with the Christian holidays. Other celebrations, however, are centred on significant phases of the agricultural cycle. The mim kut, for instance, is held in August or September, after the first harvest of the year; it is intended both to give thanks and to honour deceased relatives. The pawl kut is also a harvest festival, which takes place in December or January. Among shifting agriculturalists, the chapchar kut is held at the start of the agricultural year, after the forest has been felled and before the burning of the new fields begins—usually sometime in March.
+</p></td></tr>
+
+
+</table>
+<table bgcolor="#e7c89b">
+<tr><td><center><h1>More About Mizoram</h1></center></td>
+<td rowspan="2"><img src="C:\Users\DELL\Desktop\Shillong Images\moreaboutmizoram.jpeg" style="width:450" height="400" ></td></tr>
+
+
+
+<tr><td><p>Geologically, the Mizo Hills form a part of the Rakhine (Arakan) Mountains, a series of compact parallel ridges with a north-south axis formed of sandstone, limestone, and shales—all Cenozoic rocks between 2.6 and 65 million years old. The ridges, separated by narrow river valleys, rise to about 7,000 feet (2,100 metres). In the south, the Kaladan River and its tributaries flow southward into Myanmar, while the Dhaleswari (Tlawng) and Sonai (Tuirail) rivers flow north into Assam.
+<br>
+<h4>Climate</h4><br>
+The climate in Mizoram is moderate. During the coolest months (November through February), temperatures in Aizawl typically rise from the low 50s (low 10s C) into the high 60s F (about 20 °C) daily. In the warmest months (June through August), minimum temperatures are in the high 60s F, while maximum temperatures usually peak in the mid-80s F (about 30 °C). Rainfall averages about 100 inches (2,500 mm) annually, with most brought by the southwest monsoon (which blows from May to September).
+<br><br>
+
+
+</td></tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Little is known of Mizoram’s early history. Between 1750 and 1850 the Mizo (formerly called Lushai) tribes migrated from the nearby Chin Hills, subjugated the indigenous peoples, and assimilated them into their own society. The Mizo developed an autocratic political system based on some 300 hereditary chieftanships.
+
+The tribes of Mizoram remained unaffected by foreign political influence until the British annexed Assam in 1826 under the Treaty of Yandabo. During the next decades, Mizo raids into British territory led to occasional punitive expeditions by the British. By the 1870s the region had come under British control. In 1873 it fell under the Inner Line Regulations of the British administration, which prohibited the movement of people from the plains into the hills. However, the region was not formally annexed until the early 1890s.
+
+The region initially was administered as the North Lushai Hills (in the province of Assam) and the South Lushai Hills (within the Bengal Presidency). In 1898 the region was united as the Lushai Hills District of Assam. The district was declared an “excluded area” in 1935, whereby the provincial legislature was stripped of its jurisdiction over the area, and responsibility for the district’s administration was placed directly in the hands of the governor of Assam.<span id="dots">...</span><span id="more">Following India’s independence from the British in 1947, the district remained a part of Assam. Increasing discontent among the Mizo, however, led to a declaration of independence by the Mizo National Front in 1966. The ensuing armed rebellion compelled the central government of India to assume Mizoram’s administration and to make it a union territory in 1972. The insurgency continued until the signing of the Mizoram Peace Accord in 1986. As a result of this accord, Mizoram was granted statehood in 1987.
+
+
+
+
+
+</span></p>
+<button onclick="myFunction()" id="myBtn">Read more</button>
+
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br><br></td></tr>
+</table>
+
+
+<center>
+<table border="0" width="50%" bgcolor="#14274e">
+
+
+<tr>
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>North East State Research</b></font><hr width="250" height="10"></td>
+
+<td bgcolor="#14274e" width="25%"><font color="EAE3D2"><b>Menu</b></font><hr width="250" height="10"></td>
+
+
+</tr>
+
+<tr>
+<td>
+<a href="C:\1\grains.html"><font color="white">Arunachal Pradesh, Assam, Meghalaya,<br><br> Tripura,Nagaland, Mizoram, Sikkim, Manipur</a><br>
+
+
+<td>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\contactus.html"><font color="white">Contact Us</a><br><br>
+
+<a href="C:\Users\DELL\Desktop\IIM fol\aboutus.html"><font color="white">About Us</a><br>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+</center>
+
+
+<table border="0" width="100%" bgcolor="#14274e" >
+<tr><td><br><br><br><br><br>
+<hr class="rounded">
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
